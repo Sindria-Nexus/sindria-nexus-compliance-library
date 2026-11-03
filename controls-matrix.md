@@ -18,6 +18,17 @@ them.
 | DC-01 | Data classification & retention | `policies/07-data-classification-and-retention-policy.md` | CC6.1, CC6.5 | Classified data inventory, retention/deletion records, subject-request log, signed DPAs | Annual policy review |
 | RA-01 | Risk assessment | `policies/08-risk-assessment-policy.md` | CC3 | Risk register, annual assessment summary, accepted-risk sign-offs, escalation records | Quarterly register review; annual assessment |
 
+## ISO 42001 controls
+
+| Control | Control name | Template | ISO 42001 mapping | Evidence that proves it | Cadence |
+|---|---|---|---|---|---|
+| AI-01 | AI governance | `iso-42001/01-ai-governance-policy.md` | A.2, A.3 | Approved policy, inventory, Tier 3 assessments, deployment approvals, concern log | Annual review; per Tier 3 deployment |
+| AI-02 | AI system inventory | `iso-42001/02-ai-system-inventory.md` | A.3, A.4, A.6 | Current inventory, quarterly review records, retired entries kept | Quarterly review |
+| AI-03 | AI impact assessment | `iso-42001/03-ai-impact-assessment-template.md` | A.5 | Signed assessments, re-assessments after model changes, mitigation check records | Per Tier 3 deployment; annual |
+| AI-04 | AI data & model change control | `iso-42001/04-ai-data-and-model-change-control.md` | A.6, A.7 | Dataset records, model change records, vendor version log, monitoring reviews | Quarterly; per change |
+| AI-05 | ISO 42001 readiness | `iso-42001/05-iso-42001-readiness-checklist.md` | Clauses 4–10, Annex A | Completed checklist, scope statement, internal audit report, management review minutes | Per phase; annual |
+| AI-06 | SOC 2 to 42001 evidence map | `iso-42001/06-soc2-to-42001-evidence-map.md` | Annex A (A.2–A.10) | Completed map, reuse claims, gap closure records | Per program; on change |
+
 ## How to use this matrix in an audit
 
 1. **Point-in-time (Type 1):** the auditor tests whether each control is

@@ -1,7 +1,7 @@
 # SOC 2 Readiness Template Library
 
 Free, genuinely usable starting templates for AI startups and small SaaS companies
-preparing for SOC 2 — built by **Sindria Nexus** (readiness for AI & SaaS startups).
+preparing for SOC 2 and ISO 42001 — built by **Sindria Nexus** (readiness for AI & SaaS startups).
 
 ## What is in here
 
@@ -27,6 +27,18 @@ details, and adopt them through your normal approval process:
 | `vendor-review-tracker.md` | Track every vendor, its data access, and its next review date |
 | `access-review-template.md` | Run a quarterly access review and record who approved what |
 | `security-questionnaire-answer-bank.md` | Starter answers for the questions enterprise buyers actually ask |
+
+**ISO 42001 (`/iso-42001`)** — six templates for governing AI under
+ISO/IEC 42001:2023, in the same evidence-first style as the SOC 2 policies:
+
+| File | Covers | ISO 42001 mapping |
+|---|---|---|
+| `01-ai-governance-policy.md` | AI policy, risk tiers, human oversight, deployment gate | A.2, A.3 |
+| `02-ai-system-inventory.md` | Every AI system owned, tiered, and reviewed | A.3, A.4, A.6 |
+| `03-ai-impact-assessment-template.md` | Impact assessment with signed deploy / do-not-deploy decision | A.5 |
+| `04-ai-data-and-model-change-control.md` | Data provenance, model + prompt changes, vendor drift | A.6, A.7 |
+| `05-iso-42001-readiness-checklist.md` | Phased path to certification + what auditors ask at each phase | Clauses 4–10, Annex A |
+| `06-soc2-to-42001-evidence-map.md` | What SOC 2 evidence already proves, what to extend, what is new | Annex A (A.2–A.10) |
 
 **Index** — `controls-matrix.md` maps every control ID to its policy, Trust
 Services Criterion, evidence, and cadence. Start there if you only read one
