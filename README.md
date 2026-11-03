@@ -1,4 +1,4 @@
-# SOC 2 Readiness Template Library
+# Sindria Nexus Compliance Library
 
 Free, genuinely usable starting templates for AI startups and small SaaS companies
 preparing for SOC 2 and ISO 42001 — built by **Sindria Nexus** (readiness for AI & SaaS startups).
