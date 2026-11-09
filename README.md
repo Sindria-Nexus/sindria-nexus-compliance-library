@@ -28,7 +28,7 @@ details, and adopt them through your normal approval process:
 | `access-review-template.md` | Run a quarterly access review and record who approved what |
 | `security-questionnaire-answer-bank.md` | Starter answers for the questions enterprise buyers actually ask |
 
-**ISO 42001 (`/iso-42001`)** — six templates for governing AI under
+**ISO 42001 (`/iso-42001`)** — seven templates for governing AI under
 ISO/IEC 42001:2023, in the same evidence-first style as the SOC 2 policies:
 
 | File | Covers | ISO 42001 mapping |
@@ -39,6 +39,7 @@ ISO/IEC 42001:2023, in the same evidence-first style as the SOC 2 policies:
 | `04-ai-data-and-model-change-control.md` | Data provenance, model + prompt changes, vendor drift | A.6, A.7 |
 | `05-iso-42001-readiness-checklist.md` | Phased path to certification + what auditors ask at each phase | Clauses 4–10, Annex A |
 | `06-soc2-to-42001-evidence-map.md` | What SOC 2 evidence already proves, what to extend, what is new | Annex A (A.2–A.10) |
+| `07-clause-mistakes-and-fixes.md` | Where teams fail each clause, with examples, the auditor's finding, and the fix | Clauses 4–10 |
 
 **Index** — `controls-matrix.md` maps every control ID to its policy, Trust
 Services Criterion, evidence, and cadence. Start there if you only read one

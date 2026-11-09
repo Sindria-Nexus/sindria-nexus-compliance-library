@@ -28,6 +28,7 @@ them.
 | AI-04 | AI data & model change control | `iso-42001/04-ai-data-and-model-change-control.md` | A.6, A.7 | Dataset records, model change records, vendor version log, monitoring reviews | Quarterly; per change |
 | AI-05 | ISO 42001 readiness | `iso-42001/05-iso-42001-readiness-checklist.md` | Clauses 4–10, Annex A | Completed checklist, scope statement, internal audit report, management review minutes | Per phase; annual |
 | AI-06 | SOC 2 to 42001 evidence map | `iso-42001/06-soc2-to-42001-evidence-map.md` | Annex A (A.2–A.10) | Completed map, reuse claims, gap closure records | Per program; on change |
+| AI-07 | Clause mistakes and fixes | `iso-42001/07-clause-mistakes-and-fixes.md` | Clauses 4–10 | Clause self-tests completed, gate records, audit reports, nonconformity log with effectiveness checks | Per clause; on change |
 
 ## How to use this matrix in an audit
 
