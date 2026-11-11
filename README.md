@@ -41,6 +41,12 @@ ISO/IEC 42001:2023, in the same evidence-first style as the SOC 2 policies:
 | `06-soc2-to-42001-evidence-map.md` | What SOC 2 evidence already proves, what to extend, what is new | Annex A (A.2–A.10) |
 | `07-clause-mistakes-and-fixes.md` | Where teams fail each clause, with examples, the auditor's finding, and the fix | Clauses 4–10 |
 
+**Evidence mappings (`/evidence-mappings`)** — twenty-three one-page mappings
+from a platform's own audit trail and evaluation artifacts to ISO/IEC 42001
+Annex A controls and SOC 2 criteria, each with a last-verified date. Start
+with a platform you already run on: the page shows what your stack already
+proves and what is still the engagement.
+
 **Index** — `controls-matrix.md` maps every control ID to its policy, Trust
 Services Criterion, evidence, and cadence. Start there if you only read one
 file.
