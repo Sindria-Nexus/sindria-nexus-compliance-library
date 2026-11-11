@@ -9,11 +9,12 @@ you — policy and scope, impact and risk, accountability and response. That
 gap is the engagement.
 
 **How to use these:** find a platform you already run on, read its page,
-and check the two status columns. **In hand** means the artifact exists as
-the platform produces it. **Wrapper** means it only counts as evidence once
-your own process wraps it — a documented review cadence, a retention rule, a
-named approver, a pass threshold. Every page ends with that gap, stated
-plainly.
+and check the two status columns. **In hand** means the artifact satisfies
+the control as the platform produces it, with no extra process needed.
+**Wrapper** means it only counts as evidence once your own process wraps
+it — a documented review cadence, a retention rule, a named approver, a
+pass threshold, or configuration such as enabling a log. Every page ends
+with that gap, stated plainly.
 
 **Staying current:** platforms change tiers, retention windows, and feature
 names constantly. Every page carries a `Last verified` date as its first

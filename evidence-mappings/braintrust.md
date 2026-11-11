@@ -10,7 +10,7 @@ Braintrust is an evaluation-first platform for AI apps and agents: production tr
 
 | Platform artifact | ISO 42001 Annex A | SOC 2 CC | Status | Wrapper note |
 |---|---|---|---|---|
-| Production logs and traces — every LLM call, tool call and retrieval step captured as nested spans with inputs, outputs, latency, tokens and cost | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | In hand | — |
+| Production logs and traces — every LLM call, tool call and retrieval step captured as nested spans with inputs, outputs, latency, tokens and cost | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | Only auto-instrumented providers and decorated spans are captured — document tracing coverage in scope (see Honest flags). |
 | Online scoring on live logs — the same scorers used offline run asynchronously on production traffic, with scores attached to each log row | A.6.2.4 Verification and validation; A.9.2 Processes for responsible use | CC4.1 Monitoring activities; CC7.2 System operations | Wrapper | Needs thresholds and escalation documented. |
 | Topics, Patterns and BTQL search — a daily pass classifies traces and clusters recurring failures; logs, experiments and datasets are queryable via BTQL | A.6.2.6 Operation and monitoring; A.6.2.8 Recording of event logs | CC4.1 Monitoring activities; CC4.2 Evaluation of deficiencies | In hand | — |
 | Versioned datasets and experiments — datasets are versioned; each experiment pins to a dataset version and records inputs, outputs, expected values and scores vs a baseline. Failures promote from logs in one click | A.6.2.4 Verification and validation; A.7.2 Data for development and enhancement; A.7.4 Quality of data | CC4.1 Monitoring activities; CC8.1 Change management | In hand | — |
@@ -29,17 +29,18 @@ The point: Braintrust gives you the evidence. ISO 42001 makes it certifiable —
 
 ## Honest flags
 
-- **Log retention is short: 14 days on Starter, 30 days on Pro** (confirmed against Braintrust's pricing, October–November 2026). Pro retention can be extended to 180 days at $0.50 per GB per month; Enterprise retention is custom, up to 365 days. Export for long-term evidence.
+- **Log retention is short: 14 days on Starter, 30 days on Pro** (confirmed against Braintrust's pricing and retention docs, November 2026). Pro retention can be extended to 180 days at $0.50 per GB per month, in 30-day increments; retention storage is billed on the highest amount retained during the billing month, so extending mid-month is not prorated. Enterprise retention is custom, up to 365 days. Export for long-term evidence — S3 export is Enterprise-only.
 - **Retention applies to logs and playground data — experiments are kept up to 365 days on all plans.** The eval record outlasts the raw traces that produced it; do not assume the underlying logs are still there when an auditor asks.
 - **Tracing covers auto-instrumented providers and decorated spans only.** Uninstrumented calls leave no trace, so coverage must be documented in scope.
 - **Admin audit logs, SAML SSO and the BAA are Enterprise-only**, as are self-hosted / BYOC data planes. On Starter every member is an Owner — there is only one permission group — so access control evidence on the free tier is thin.
-- **Topics classification sends trace text to Braintrust-hosted models** even in BYOC and self-hosted deployments. Note it in your data-handling scope.
+- **Topics is an AI feature that runs on Braintrust's built-in models unless you supply your own key** (model credits cover Topics and other built-in models). Confirm where classification runs before enabling Topics in a BYOC or self-hosted deployment, and note it in your data-handling scope.
 
 ## Sources
 
-- Braintrust documentation — logs and tracing, datasets, experiments, scorers, prompts and online scoring: <https://www.braintrust.dev/docs>
+- Braintrust docs — Configure data retention: <https://docs.braintrust.dev/admin/data-management/retention>
+- Braintrust docs — Access control (permission groups by plan): <https://docs.braintrust.dev/admin/access-control>
+- Braintrust docs — Plans and limits: <https://docs.braintrust.dev/plans-and-limits>
 - Braintrust pricing (retention: Starter 14 days, Pro 30 days, extendable to 180 days; Enterprise to 365 days): <https://www.braintrust.dev/pricing>
-- Braintrust docs — plans and limits (retention): <https://docs.braintrust.dev/admin/data-management/retention>
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 Trust Services Criteria (CC criteria)
 

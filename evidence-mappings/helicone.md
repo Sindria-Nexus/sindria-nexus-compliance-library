@@ -6,7 +6,7 @@ Last verified: November 11, 2026
 
 **Helicone** is an open-source (Apache-2.0) LLM observability platform with an AI gateway: point an existing model client at Helicone's base URL and every proxied request is logged with prompt, response, model, tokens, cost, and latency, with edge caching, rate limits, evals, datasets, and security checks on top. Async logging (via OpenLLMetry/OpenTelemetry) covers calls that do not go through the gateway.
 
-> **Status warning — read first.** Mintlify acquired Helicone on 3 March 2026 and the hosted product is now in **maintenance mode**: security fixes and new-model support continue, but feature development has stopped (changelog last entry 26 November 2025) and **new signups are disabled**. The Apache-2.0 self-hosted version remains open to everyone. Treat Helicone as an existing-user / self-host option, not a new-vendor recommendation, until Helicone clarifies its status. **Update (October 2026):** Helicone's site now states it is no longer part of Mintlify, with details to come, and the acquisition announcement has been removed — ownership is in flux. Maintenance mode and disabled new signups still stand as last checked.
+> **Status warning — read first.** Mintlify announced on 3 March 2026 that it had acquired Helicone and that the hosted product would continue operating in **maintenance mode** (security updates, bug fixes, and new-model support continue; feature development stops) while it helped customers migrate to another platform. That announcement is the source for the maintenance-mode claim. **This could not be verified against a Helicone-owned source on this check:** no maintenance-mode statement was found on the helicone.ai pages read on 11 November 2026, and the Helicone team's own acquisition letter is no longer published. Third-party checks report that Helicone's site states it is no longer part of Mintlify (since ~18 October 2026), with details to come, and that new signups are disabled — treat both as reported, not confirmed. The Apache-2.0 self-hosted version remains open to everyone. Treat Helicone as an existing-user / self-host option, not a new-vendor recommendation, until Helicone clarifies its status.
 
 ## Mapping — platform artifact → ISO 42001 Annex A / SOC 2 CC
 
@@ -31,21 +31,22 @@ The point: Helicone gives you the evidence. ISO 42001 makes it certifiable — t
 
 ## Honest flags
 
-- **Prompt and response bodies are logged by default.** Use omit-log headers and redaction where data is sensitive. `Helicone-Omit-Request` / `Helicone-Omit-Response` stop *storage*, but Helicone's own docs note the content is still sent to its backend. Keeping payloads out entirely requires async logging with content tracing off (which takes the gateway out of the request path) or fully disabling logging in async mode.
-- **Retention is plan-gated: 7 days free, 1 month on Pro ($79/mo), 3 months on Team ($799/mo), configurable on Enterprise.** Free tier is 10,000 requests/month, 1 seat, 1 GB storage. Export for long-term evidence.
-- **Hosted product in maintenance mode since March 2026; new signups disabled.** Feature development has stopped; only security fixes and new-model support continue. Mintlify's acquisition announcement had said it would help customers migrate to another platform, but that announcement has since been removed and Helicone states (since ~18 October 2026) it is no longer part of Mintlify — ownership and next steps are unconfirmed. The standalone Rust ai-gateway repo has been idle since 21 November 2025 (relicensed Apache-2.0 → GPL-3.0 on its final commit).
-- **LLM Security is header-enabled (`Helicone-LLM-Security-Enabled`) and built on Meta security models (Prompt Guard / Llama Guard).** Third-party comparisons report it currently works with OpenAI models only — verify per-provider coverage before relying on it for non-OpenAI traffic.
+- **Prompt and response bodies are logged by default.** Use omit-log headers and redaction where data is sensitive. `Helicone-Omit-Request` / `Helicone-Omit-Response` stop the content being *stored* in logs; only async logging offers not sending the request or response to Helicone's backend at all, and fully disabling logging is only available in async mode (the gateway proxy necessarily sees the content it forwards). Keeping payloads out entirely requires async logging with content tracing off (which takes the gateway out of the request path) or fully disabling logging in async mode.
+- **Retention is plan-gated: 7 days free, 1 month on Pro ($79/mo), 3 months on Team ($799/mo), configurable on Enterprise.** Free tier is 10,000 requests/month, 1 seat, 1 GB storage. Export for long-term evidence. (Per reads of Helicone's pricing page; confirm on the current page — new signups are reported disabled, so these tiers now apply to existing customers.)
+- **Hosted product reported in maintenance mode since March 2026; new signups reported disabled.** Per Mintlify's 3 March 2026 announcement, feature development stopped and only security fixes and new-model support continue; the announcement also said Mintlify would help customers migrate, but that announcement has since been removed from Helicone's site and Helicone is reported (since ~18 October 2026) to state it is no longer part of Mintlify — ownership and next steps are unconfirmed. None of this could be verified from a Helicone-owned source on this check. The standalone Rust ai-gateway repo was reported idle since 21 November 2025 — also unverified on this check.
+- **LLM Security is header-enabled (`Helicone-LLM-Security-Enabled`) and built on Meta security models (Prompt Guard 86M / Llama Guard 3.8B).** Third-party comparisons report it currently works with OpenAI models only — verify per-provider coverage before relying on it for non-OpenAI traffic. Helicone's own docs do not state a provider limitation.
 - **Caching is exact-match, edge-stored (Cloudflare Workers KV), not on your infrastructure.** Default TTL 7 days (`max-age=604800`), maximum 365 days; bucket max 20 outside Enterprise. In async-logging mode, caching, custom rate limiting, and retries are not available.
 - **Tracing is request-level, not span-based.** There is no nested trace tree of tool calls and agent steps as in Weave/Langfuse — scope the A.6.2.8 claim to per-request records.
 
 ## Sources
 
+- Mintlify, Mintlify acquires Helicone (Mar 2026, maintenance mode + migration support): https://www.mintlify.com/blog/mintlify-acquires-helicone
 - Helicone docs, LLM Caching: https://docs.helicone.ai/features/advanced-usage/caching
 - Helicone docs, Omit Logs: https://docs.helicone.ai/features/advanced-usage/omit-logs
+- Helicone docs, LLM Security: https://docs.helicone.ai/features/advanced-usage/llm-security
 - Helicone docs, Stringent compliance requirements: https://docs.helicone.ai/faq/compliance
-- Helicone docs — request logging, scores, LLM security, moderations (docs.helicone.ai)
-- ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
-- AICPA SOC 2 CC criteria
+- Helicone, Pricing: https://www.helicone.ai/pricing
+- Control references: ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10); AICPA 2017 Trust Services Criteria with 2022 revised points of focus (TSP Section 100)
 
 ## Disclaimer
 
