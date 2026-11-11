@@ -43,10 +43,11 @@ The point: Databricks gives you the evidence. ISO 42001 makes it certifiable —
 - Databricks — "What's new in Unity Gateway: service policies, guardrails, observability, and cost controls for AI agents and MCPs": https://www.databricks.com/blog/whats-new-unity-ai-gateway-service-policies-guardrails-observability-and-cost-controls-ai
 - Databricks docs — Unity Gateway observability: https://docs.databricks.com/aws/en/ai-gateway/observability
 - Databricks docs — Log requests and responses for serving endpoints (inference tables): https://docs.databricks.com/aws/en/ai-gateway/inference-tables-serving-endpoints
-- Microsoft Learn — Configure governance on model serving endpoints / Unity Gateway inference tables (legacy retirement dates)
+- Microsoft Learn — Inference tables for monitoring and debugging models (legacy retirement dates, 20 Feb / 20 Mar 2026): https://learn.microsoft.com/en-gb/azure/databricks/machine-learning/model-serving/inference-tables
+- Microsoft Learn — Log requests and responses to inference tables (Unity Gateway): https://learn.microsoft.com/en-au/azure/databricks/ai-gateway/inference-tables
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 Trust Services Criteria (CC criteria)
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

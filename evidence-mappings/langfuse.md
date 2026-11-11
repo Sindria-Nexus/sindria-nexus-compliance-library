@@ -45,4 +45,4 @@ The point: Langfuse gives you the evidence. ISO 42001 makes it certifiable — t
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. A vendor's own certification covers the vendor, not the prospect's deployment. Applicability is set in your Statement of Applicability and tested by your auditor.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

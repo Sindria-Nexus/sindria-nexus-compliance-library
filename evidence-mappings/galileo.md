@@ -38,11 +38,11 @@ The point: Galileo gives you the evidence. ISO 42001 makes it certifiable — th
 ## Sources
 
 - Galileo documentation — tracing, metrics and Luna-2, datasets and experiments, Protect and Agent Control: <https://docs.galileo.ai>
-- Splunk Agent Observability (Galileo product page and pricing, post-7 August 2026)
-- Cisco announcement of Galileo acquisition (announced 9 April 2026, completed 22 May 2026)
+- Splunk Agent Observability (Galileo product page and pricing, post-7 August 2026): <https://www.splunk.com/en_us/products/agent-observability.html>
+- Cisco announcement of Galileo acquisition (announced 9 April 2026, completed 22 May 2026): <https://blogs.cisco.com/news/Cisco-announces-the-intent-to-acquire-galileo>
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 Trust Services Criteria (CC criteria)
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment of its platform.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

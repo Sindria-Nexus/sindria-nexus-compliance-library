@@ -39,10 +39,10 @@ The point: Braintrust gives you the evidence. ISO 42001 makes it certifiable —
 
 - Braintrust documentation — logs and tracing, datasets, experiments, scorers, prompts and online scoring: <https://www.braintrust.dev/docs>
 - Braintrust pricing (retention: Starter 14 days, Pro 30 days, extendable to 180 days; Enterprise to 365 days): <https://www.braintrust.dev/pricing>
-- Braintrust docs — plans and limits
+- Braintrust docs — plans and limits (retention): <https://docs.braintrust.dev/admin/data-management/retention>
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 Trust Services Criteria (CC criteria)
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment of its platform.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

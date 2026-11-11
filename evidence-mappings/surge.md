@@ -40,12 +40,11 @@ The point: Surge gives you the evidence. ISO 42001 makes it certifiable — the 
 ## Sources
 
 - Surge AI — Research (GSM8K, AdvancedIF, EnterpriseBench / CoreCraft): https://surgehq.ai/research
+- Surge AI — How Surge AI Built OpenAI's GSM8K Dataset of 8,500 Math Problems: https://surgehq.ai/blog/how-we-built-it-openais-gsm8k-dataset-of-8500-math-problems
 - Surge AI — Building AdvancedIF: https://surgehq.ai/blog/advancedif-and-the-evolution-of-instruction-following-benchmarks
-- Seminal — Data labeling, RLHF and human evaluation vendors (Surge delivery model): https://seminal.ai/reference/categories/data-labeling-rlhf-human-evaluation-vendors/
-- Hokai — Surge AI review (product suite, sales-led model): https://hokai.io/hub/tools/surge-ai
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 CC criteria
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability is set in your Statement of Applicability and tested by your auditor. Any certification Surge holds covers Surge's own operations — not your deployment, your evaluation design, or your use of the delivered data.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

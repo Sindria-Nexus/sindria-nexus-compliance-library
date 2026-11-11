@@ -31,11 +31,11 @@ The point: Vercel AI Gateway gives you the evidence. ISO 42001 makes it certifia
 ## Honest flags
 
 - **The gateway retains no prompt or response content, so its logs are metadata, not content, evidence.** What is recorded: status, model, provider, token usage, cost, duration, authentication method and routing attempts. Content evidence must come from your own application logging.
-- **Zero data retention by default covers Vercel's own layer only.** Default routing does not constrain providers' retention or training policies — to restrict routing to providers with zero-retention agreements, set `zeroDataRetention` (or `disallowPromptTraining`) per request. Per-request ZDR is free on Pro and Enterprise and is not available on Hobby; team-wide ZDR costs $0.10 per 1,000 requests. BYOK keys are skipped under ZDR unless flagged ZDR-compliant, and the contractual promise not to train on content applies to Enterprise subscriptions only.
+- **Zero data retention by default covers Vercel's own layer only.** Default routing does not constrain providers' retention or training policies — to restrict routing to providers with zero-retention agreements, set `zeroDataRetention` (or `disallowPromptTraining`) per request. Per-request ZDR costs nothing extra but needs a paid account — Pro, Enterprise, or purchased credits; Hobby teams can use it after purchasing credits. Team-wide ZDR costs $0.10 per 1,000 requests. BYOK keys are skipped under ZDR unless flagged ZDR-compliant. The no-training filter is available to all users at no extra charge, but it is not enforced on BYOK requests — your own provider agreement governs there (it is honoured if the gateway falls back to system credentials).
 - **Budgets are a soft cap, and BYOK spend is never counted.** Vercel's own docs: "A budget is a soft cap, not a hard limit. The check runs at the start of each request, so the request that crosses the limit still completes." BYOK spend is metered separately and does not count toward any limit — but an exceeded budget still rejects BYOK requests in its scope with HTTP 402. A failed BYOK request falls back to Vercel system credentials and is billed to your credits. Keep a hard limit on the provider account too.
 - **Spend alerts are off by default.** When you add or edit a budget, pick 50%, 75% and/or 100%; each selected threshold fires at most once per period. Budgets themselves are optional — a team, project, key or member without one has unlimited spend.
 - **Routing details are kept 30 days** (log view looks back 36 days). Long-term evidence needs Trace Drains export.
-- **Trace Drains, Custom Reporting's reporting endpoint, per-request ZDR and team-wide ZDR are Pro / Enterprise.** Confirm the tier before promising the control.
+- **Trace Drains and Custom Reporting's reporting endpoint are Pro / Enterprise; per-request and team-wide ZDR need a paid account (Pro/Enterprise or purchased credits).** Confirm the tier before promising the control.
 
 ## Sources
 
@@ -48,4 +48,4 @@ The point: Vercel AI Gateway gives you the evidence. ISO 42001 makes it certifia
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment of its platform.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

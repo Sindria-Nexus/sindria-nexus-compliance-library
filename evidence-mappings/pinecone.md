@@ -10,7 +10,7 @@ Pinecone is a managed vector database — the retrieval layer behind RAG systems
 
 | Platform artifact | ISO 42001 Annex A | SOC 2 CC | Status | Wrapper note |
 |---|---|---|---|---|
-| Audit logs exported to your own bucket — user, service-account and API actions written every 30 minutes as JSON to an S3 or GCS bucket you control, lockable WORM with S3 Object Lock | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | Enterprise only — the Standard HIPAA add-on covers the BAA, it does not unlock audit logs. Off until enabled, never retroactive: only logs since the integration was created and enabled are saved. |
+| Audit logs exported to your own bucket — user, service-account and API actions written every 30 minutes as JSON to an S3 or GCS bucket you control, lockable WORM with S3 Object Lock | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | Enterprise only, except the Standard HIPAA add-on ($190/month) also includes audit logging — Pinecone's cost docs list it in the add-on and require audit logs to be configured for HIPAA compliance with it. Off until enabled, never retroactive: only logs since the integration was created and enabled are saved. |
 | Full control-plane event coverage — organisation, project, index, user, API-key and security events, each with actor, action, resource and timestamp | A.6.2.8 Recording of event logs; A.6.2.7 Technical documentation | CC7.2 System operations; CC6.1 Logical access | In hand | — |
 | Index & backup lifecycle in the log — create, update and delete of indexes and backups are recorded; a backup restores to a new index | A.6.2.5 Deployment; A.6.2.8 Recording of event logs | CC8.1 Change management; CC7.4 Recovery | Wrapper | Needs a backup cadence and a tested restore. |
 | RBAC for every principal — users, service accounts and API keys get organisation and project roles (Owner, Manager, Member), split into Control Plane and Data Plane Editor / Viewer, enforced at retrieval | A.9.2 Processes for responsible use; A.4.5 System and computing resources | CC6.1 Logical access; CC6.6 System boundaries | Wrapper | Permissions are the union of roles — needs access reviews. |
@@ -30,7 +30,7 @@ The point: Pinecone gives you the evidence. ISO 42001 makes it certifiable — t
 ## Honest flags
 
 - **Audit logs cover the management / control plane only** — not data-plane queries, upserts, or which vectors a RAG answer retrieved. That evidence lives in your application layer.
-- **Audit logs are Enterprise-only** (confirmed against Pinecone's pricing and third-party plan checks, October–November 2026). The $190/month HIPAA add-on on Standard buys the BAA; it does not unlock audit logs, private endpoints or CMEK.
+- **Audit logs are Enterprise-only, except the Standard HIPAA add-on also includes audit logging** (Pinecone's cost docs list audit logging in the $190/month add-on and require audit logs to be configured for HIPAA compliance with it). The add-on does not unlock private endpoints or CMEK.
 - **Audit logs are off until enabled and never retroactive.** They are written every 30 minutes as JSON blobs to a bucket you control; only logs since the integration was created and enabled are saved. Disabling pauses delivery; removing the integration loses undelivered logs.
 - **A namespace partitions — it does not authorise.** It is a filing system, not an entitlement check: a search inside one namespace never returns another namespace's vectors, but only if the application always queries the right one.
 - **Pinecone's SOC 2 Type II / ISO 27001 covers Pinecone, not your deployment.** Your index configuration, keys, namespaces and application-layer enforcement are yours to evidence.
@@ -39,10 +39,12 @@ The point: Pinecone gives you the evidence. ISO 42001 makes it certifiable — t
 
 - Pinecone Docs — Security overview: <https://docs.pinecone.io/admin/security/security-overview>
 - Pinecone Docs — Configure audit logs: <https://docs.pinecone.io/admin/security/configure-audit-logs>
-- Pinecone Docs — Manage roles and access (role tables, union of permissions)
+- Pinecone Docs — Manage roles and access (role tables, union of permissions): <https://docs.pinecone.io/admin/security/manage-rbac>
+- Pinecone pricing (Audit Logs, Private Endpoints, CMEK and SCIM under Enterprise; HIPAA add-on $190/month on Standard): <https://www.pinecone.io/pricing/#plan-comparison-table>
+- Pinecone Docs — Understand cost (HIPAA compliance add-on includes audit logging): <https://docs.pinecone.io/guides/cost/understand-cost>
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 Trust Services Criteria (CC criteria)
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment of its platform.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

@@ -32,7 +32,7 @@ The point: NVIDIA gives you the guardrails, the evals, and a witness outside the
 ## Honest flags and footnotes
 
 - **Evaluator output is JSON, not YAML.** The source mapping's "results.yml" is corrected: runs write an `eval-*.json` bundle plus per-problem `results.jsonl` (and `trajectories.jsonl`, `runtime_stats.json`, `failure_analysis.json`). Retain the bundle and the JSONL, not a YAML summary.
-- **NIM's default log level means silence on success.** With `NIM_LOG_LEVEL=WARNING` (the default for NIM for LLM and VLM), a correctly served completion generates no log line, and nothing in the documented telemetry records caller identity, role, or an authorization decision — correlation headers identify the request, not the caller. (Some Helm-packaged NIMs default to INFO; verify the default for the NIM you deploy.)
+- **NIM's default log level means silence on success.** With `NIM_LOG_LEVEL=WARNING` (the default for NIM for LLM and VLM per NVIDIA's Logging and Observability reference), a correctly served completion generates no log line, and nothing in the documented telemetry records caller identity, role, or an authorization decision — correlation headers identify the request, not the caller. (NVIDIA's own docs conflict here: the Configuration reference lists the default as `DEFAULT`, which sets loggers to INFO — verify the default for the NIM image you deploy. Some Helm-packaged NIMs default to INFO.)
 - **Guardrails do not stamp your audit fields.** Reason code, policy version, and tenant ID must be added by your application; version the library dependency, guardrails configuration, prompts, and custom actions together.
 - **Sentry is a reference design with planned availability.** Do not present it as a deployed control until it ships (planned early 2027) and is running on BlueField-4 in your environment. OpenShell itself is available open-source now.
 - **Self-hosted means self-retained.** NVIDIA supplies no log retention, SIEM, or alerting — log shipping, retention, and review cadence are yours.
@@ -50,4 +50,4 @@ The point: NVIDIA gives you the guardrails, the evals, and a witness outside the
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability is set in your Statement of Applicability and tested by your auditor. NVIDIA's own certifications cover NVIDIA's products and operations — not your deployment, your NIM configuration, your guardrail policies, or your agents.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

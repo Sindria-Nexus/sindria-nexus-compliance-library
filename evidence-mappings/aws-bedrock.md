@@ -13,7 +13,7 @@ Status key: **In hand** — the artifact satisfies the control as evidence. **Wr
 | Platform artifact | ISO 42001 Annex A | SOC 2 CC | Status | Wrapper note |
 |---|---|---|---|---|
 | **CloudTrail management events.** Every Bedrock API call recorded: who made it, with which IAM identity, from which IP, and when — InvokeModel, Converse, and streaming variants included. | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | In hand | On by default, but Event History keeps management events for 90 days only. Longer retention needs a trail or event data store delivering to S3. CloudTrail records *that* a call happened — never the prompt or response bodies. |
-| **Model invocation logging to S3 / CloudWatch Logs.** The full prompt sent, response returned, model ID, token counts, and caller ARN, for every invocation. | A.6.2.8 Recording of event logs; A.7.5 Data provenance | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | **Off by default — enable per Region**, document retention and review. Bodies over 100 KB need an S3 large-data location; the CloudWatch GenAI Observability per-request table is only populated if logs go to CloudWatch Logs. |
+| **Model invocation logging to S3 / CloudWatch Logs.** The full prompt sent, response returned, model ID, token counts, and caller ARN, for every invocation on the `bedrock-runtime` endpoint. | A.6.2.8 Recording of event logs; A.7.5 Data provenance | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | **Off by default — enable per Region**, document retention and review. Covers `bedrock-runtime` calls only — calls on other endpoints (e.g. `bedrock-mantle`) are not captured. Bodies over 100 KB need an S3 large-data location; the CloudWatch GenAI Observability per-request table is only populated if logs go to CloudWatch Logs. |
 | **CloudTrail data events for agents and knowledge bases.** InvokeAgent, Retrieve, RetrieveAndGenerate, and ApplyGuardrail calls. | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | **Not logged by default** — needs advanced event selectors, and data events are charged separately. |
 | **Guardrails — content filters, denied topics, and word filters.** Harmful categories, off-limits topics, and blocked terms screened on both the input prompt and the model response. | A.9.2 Processes for responsible use; A.6.2.4 Verification and validation | CC5.3 Control activities; CC7.2 System operations | Wrapper | Only where the guardrail ID and version are passed on the call. A guardrail that exists but is never attached to a call protects nothing. |
 | **Guardrails — sensitive information filters.** PII in prompts and responses blocked or anonymised, with entity and action recorded in the guardrail trace. | A.7.2 Data for development; A.9.2 Processes for responsible use | CC6.1 Logical access; CC7.2 System operations | Wrapper | Only where the guardrail ID and version are passed on the call (corrected from "In hand" in the source — same condition as the content filters). See flags: the trace itself contains the original PII value, and the filter is text-only. |
@@ -31,7 +31,7 @@ The point: AWS gives you the evidence. ISO 42001 makes it certifiable — the po
 
 ## Honest flags
 
-- **Three logging settings, three defaults.** CloudTrail management events are on (90 days in Event History); CloudTrail data events are off; model invocation logging is off. Unless invocation logging was already on when something happened, there is no record of what was asked or answered, and it cannot be recovered later.
+- **Three logging settings, three defaults.** CloudTrail management events are on (90 days in Event History); CloudTrail data events are off; model invocation logging is off. Unless invocation logging was already on when something happened, there is no record of what was asked or answered, and it cannot be recovered later. Invocation logging also covers only `bedrock-runtime` calls — traffic on `bedrock-mantle` (e.g. the native Anthropic Messages API path) is not captured, so confirm which endpoint your traffic uses.
 - **Guardrails do not apply themselves.** A guardrail only runs when its ID and version are passed on the call (or via `ApplyGuardrail`). Audit the call sites, not the guardrail's existence.
 - **The guardrail trace leaks the PII it caught — by design.** The `match` field in the guardrail trace contains the original PII value, not the masked output, so your application can use the detection result. Treat trace output with the same care as the prompt data itself, and restrict who can read it.
 - **Sensitive-information filters are text-only.** They do not evaluate tool arguments or tool results in function-calling workloads — PII in those fields is neither blocked nor masked. `ANONYMIZE` on input also needs its input-specific fields set explicitly; a top-level action alone can silently do nothing on the input side.
@@ -40,8 +40,9 @@ The point: AWS gives you the evidence. ISO 42001 makes it certifiable — the po
 
 ## Sources
 
-- AWS Documentation — CloudTrail logging for Amazon Bedrock; Model invocation logging (off by default, per Region, S3 / CloudWatch Logs)
-- AWS Documentation — Guardrails for Amazon Bedrock
+- AWS Documentation — CloudTrail logging for Amazon Bedrock: https://docs.aws.amazon.com/bedrock/latest/userguide/logging-using-cloudtrail.html
+- AWS Documentation — Model invocation logging (off by default, per Region, S3 / CloudWatch Logs; `bedrock-runtime` only): https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html
+- AWS Documentation — Guardrails for Amazon Bedrock: https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html
 - AWS Documentation — Remove PII from conversations by using sensitive information filters: https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-sensitive-filters.html
 - AWS Documentation — Monitor Amazon Bedrock Guardrails using CloudWatch metrics: https://docs.aws.amazon.com/bedrock/latest/userguide/monitoring-guardrails-cw-metrics.html
 - AWS Machine Learning Blog — model invocation logging is off by default: https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/
@@ -50,4 +51,4 @@ The point: AWS gives you the evidence. ISO 42001 makes it certifiable — the po
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

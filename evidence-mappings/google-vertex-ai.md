@@ -49,4 +49,4 @@ The point: Google gives you the evidence. ISO 42001 makes it certifiable — the
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability is set in your Statement of Applicability and tested by your auditor. Google's own certifications (including SOC 2 and ISO 42001) cover Google's platform and operations — not your deployment, your configuration, or your use of the models.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.

@@ -14,8 +14,8 @@ Status key: **In hand** — the artifact satisfies the control as evidence. **Wr
 
 | Platform artifact | ISO 42001 Annex A | SOC 2 CC | Status | Wrapper note |
 |---|---|---|---|---|
-| **Compliance API Activity Feed.** Sign-ins, admin actions, config changes, API key and role changes — 6-year retention. | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | Enterprise only — enable first; **not retroactive**: recording starts the day the Compliance API is enabled, with no backfill. |
-| **Usage & Cost Reports (Admin API).** Tokens and spend by key, workspace, model, and tier; Console exports CSV. | A.6.2.6 Operation and monitoring; A.4.5 System resources | CC4.1 Monitoring activities; CC7.2 System operations | In hand | Cost report is a daily roll-up lagging real-time usage by ~24 hours. Requires an admin-scoped API key and an organisation (not available for individual accounts). |
+| **Compliance API Activity Feed.** Sign-ins, admin actions, config changes, API key and role changes — 6-year retention. | A.6.2.8 Recording of event logs; A.6.2.6 Operation and monitoring | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | Full Compliance API (content endpoints) is Enterprise-only; the Activity Feed is also available to standalone Claude Console organisations via an Admin API key (feed only) — enable first; **not retroactive**: recording starts the day the Compliance API is enabled, with no backfill. |
+| **Usage & Cost Reports (Admin API).** Usage report: tokens by key, workspace, model, and tier; cost report: daily spend by workspace (and description) — not by API key; Console exports CSV. | A.6.2.6 Operation and monitoring; A.4.5 System resources | CC4.1 Monitoring activities; CC7.2 System operations | In hand | Cost report is a daily roll-up lagging real-time usage by ~24 hours. Requires an admin-scoped API key and an organisation (not available for individual accounts). |
 | **Workspaces, API keys, and member roles.** Keys scoped to a workspace, listed and revoked via the Admin API; invites and roles in one record. | A.4.5 System resources; A.6.2.8 Recording of event logs | CC6.1 Logical access; CC6.6 System boundaries | In hand | New API keys are created in the Console, not through the Admin API. |
 | **Evaluation datasets and grading.** Task-specific test sets mirroring real use, graded by code, humans, or an LLM judge against set criteria. | A.6.2.4 Verification and validation; A.7.4 Quality of data; A.7.2 Data for development | CC4.1 Monitoring activities; CC7.2 System operations | Wrapper | Your datasets, rubrics, and retained results are the evidence. Anthropic supplies the method, not the evals. |
 | **Per-response usage and prompt-cache records.** Every response returns the model, input/output tokens, and cache creation/read tokens. | A.7.5 Data provenance; A.6.2.8 Recording of event logs | CC7.2 System operations; CC4.1 Monitoring activities | Wrapper | Counts only if your app logs and retains them — Anthropic does not keep your prompts and responses for you. |
@@ -35,20 +35,20 @@ The point: Anthropic gives you the evidence. ISO 42001 makes it certifiable — 
 
 - **The Activity Feed is metadata, not content.** It records who did what and when (actor, event type, timestamps, chat/project IDs). Prompt and response content is a separate matter: chat/file/project content follows your organisation's retention policy, and the Compliance API cannot return content your own policy has already deleted. Do not confuse the 6-year Activity Feed retention with 6 years of prompt history.
 - **Do not cite the 180-day figure.** The 180-day number seen in many write-ups belongs to the Enterprise CSV audit export under Organisation settings — a capped lookback — not the Compliance API Activity Feed, which is retained for 6 years.
-- **The Compliance API is Enterprise only** and must be explicitly enabled by the Primary Owner. Claude Team does not have it. If you are not on Enterprise, this row does not exist for you.
+- **The full Compliance API is Enterprise-only; the Activity Feed is not.** Content endpoints (chats, files, projects, sessions) need a Claude Enterprise tenant and a Compliance Access Key created by the Primary Owner. But a standalone Claude Console organisation can enable the Compliance API itself (organisation-admin toggle) and read the Activity Feed with an Admin API key — feed only, no content. Do not write off the feed row just because you are not on Enterprise; do not claim content coverage unless you are.
 - **The Activity Feed is not retroactive.** Enable it late and there is nothing behind the enablement date. Switch it off and the gap is unrecoverable.
 - **No prompt/response logging is built in.** The API returns token counts per response, but unless your own application logs and retains prompts, responses, and cache records, there is no record of what the model was asked or answered. Claude used through Bedrock, Vertex, or Foundry is outside the Compliance API's coverage.
 - **System cards move with the model.** Each model version has its own card (e.g. Claude Opus 5, July 2026). Pin the model version, keep the card for that version, and log changes — an unpinned model silently changes the evidence underneath you.
 
 ## Sources
 
-- Anthropic — Compliance API documentation (Activity Feed, 6-year retention), platform.claude.com
-- Anthropic — Admin API documentation (Usage & Cost Reports, workspaces, API keys), platform.claude.com
-- Anthropic — "Define success criteria and build evaluations" (Test & Evaluate), platform.claude.com
+- Anthropic — Compliance API documentation (Activity Feed, 6-year retention): https://platform.claude.com/docs/en/manage-claude/compliance-api
+- Anthropic — Admin API documentation (Usage & Cost Reports, workspaces, API keys): https://platform.claude.com/docs/en/manage-claude/admin-api
+- Anthropic — "Define success criteria and build evaluations" (Test & Evaluate): https://platform.claude.com/docs/en/test-and-evaluate/develop-tests
 - Anthropic — Claude Opus 5 System Card: https://www.anthropic.com/claude-opus-5-system-card
 - ISO/IEC 42001:2023 Annex A (38 controls, A.2–A.10)
 - AICPA SOC 2 Trust Services Criteria (CC criteria)
 
 ## Disclaimer
 
-This is readiness guidance, not a certification guarantee. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.
+This is a mapping aid, not legal advice or a compliance guarantee. ISO 42001 or SOC 2 evidence does not equal legal compliance. Applicability of each control is set in your Statement of Applicability and tested by your auditor. A vendor's own certification covers the vendor, not your deployment.
