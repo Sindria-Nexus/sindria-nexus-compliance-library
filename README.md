@@ -47,6 +47,15 @@ Annex A controls and SOC 2 criteria, each with a last-verified date. Start
 with a platform you already run on: the page shows what your stack already
 proves and what is still the engagement.
 
+**Crosswalk (`/crosswalk`)** — the Sindria Nexus crosswalk maps ISO/IEC
+42001 controls to other frameworks, law by law, so a team can see which of
+its governance controls help with each external duty and where the gaps are.
+Start with the free sample: [`crosswalk/california-preview`](crosswalk/california-preview)
+maps seven California AI laws (AB 2013, SB 942, the CCPA ADMT rules, FEHA,
+SB 947, SB 53, SB 813/AB 1405) to ISO 42001 in 39 requirements and 123
+mappings — with a startup triage table, the full data as CSV, and the
+verification record. The preview is v0.1 and not yet attorney-reviewed.
+
 **Index** — `controls-matrix.md` maps every control ID to its policy, Trust
 Services Criterion, evidence, and cadence. Start there if you only read one
 file.
@@ -127,6 +136,11 @@ questions buyers ask first.
 
 MIT — use them commercially, modify them, keep them private. Attribution is
 appreciated but not required. See `LICENSE`.
+
+One exception: the material in `crosswalk/california-preview` is licensed
+under the Creative Commons Attribution 4.0 International Public License
+(CC BY 4.0) — share and adapt it, even commercially, as long as you give
+appropriate credit to Sindria Nexus. See `crosswalk/california-preview/LICENSE`.
 
 ## A note on staying current
 
