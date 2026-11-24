@@ -14,11 +14,11 @@ U-01–U-16 in [triage.md](triage.md#open-items).
 
 | Source | Link | Date checked | Status |
 |---|---|---|---|
-| SB 53 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53 | 21 Nov 2026 | Direct read not confirmed (U-12) |
-| SB 947 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB947 | 21 Nov 2026 | Direct read not confirmed; full text read via a chaptered-text mirror (U-13) |
-| SB 1000 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1000 | 21 Nov 2026 | Direct read not confirmed (U-14) |
-| AB 853 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB853 | 21 Nov 2026 | Direct read not confirmed; text read via a mirror (U-14) |
-| AB 2713 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2713 | 21 Nov 2026 | Direct read not confirmed (U-14) |
+| SB 53 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-12 closed) |
+| SB 947 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB947 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-13 closed) |
+| SB 1000 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1000 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed) |
+| AB 853 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB853 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed); text previously read via a mirror 21 Nov 2026 |
+| AB 2713 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2713 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed) |
 | SB 813 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB813 | 21 Nov 2026 | Bill status page opened; chaptered text not read from the official source (U-15) |
 | AB 1405 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1405 | 21 Nov 2026 | Bill status page opened; chaptered text not read from the official source (U-16) |
 
@@ -28,9 +28,9 @@ These pages could not be read automatically; open them in a browser.
 
 | Sections | Link (base — change the section number for the others) | Open item |
 |---|---|---|
-| Lab. Code §1107.2 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1107.2.&lawCode=LAB | U-01 |
-| Civ. Code §§3110–3111 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3111 | U-04 |
-| BPC §§22757.1–22757.6 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=22757.3 | U-07 |
+| Lab. Code §1107.2 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1107.2.&lawCode=LAB | U-01 (closed 24 Nov 2026; §1107.2 confirmed via the SEC. 4 chaptered-text read; codified page not opened) |
+| Civ. Code §§3110–3111 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3111 | U-04 (closed 24 Nov 2026; §3111 read, §3110 not opened) |
+| BPC §§22757.1–22757.6 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=22757.3 | U-07 (§22757.3 read 24 Nov 2026; §§22757.1, 22757.2, 22757.4, 22757.5, 22757.6 not yet opened) |
 | Lab. Code §§1520–1526.7 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=1520 | U-09 |
 | Gov. Code §§8898–8898.4 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=8898 | U-11 |
 | Gov. Code §§11549.80–11549.86 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11549.82 | U-11 |
@@ -59,15 +59,15 @@ These pages could not be read automatically; open them in a browser.
 
 | Source | Link | Date checked | Status |
 |---|---|---|---|
-| Justia, Civ. Code §3111 | https://law.justia.com/codes/california/code-civ/division-3/part-4/title-15-2/section-3111/ | 21 Nov 2026 | Mirror (U-04) |
-| Justia, Civ. Code §3110 | https://law.justia.com/codes/california/code-civ/division-3/part-4/title-15-2/section-3110/ | 21 Nov 2026 | Mirror (U-04) |
-| Justia, Lab. Code §§1107, 1107.1, 1107.2 | https://law.justia.com/codes/california/code-lab/division-2/part-3/chapter-5-1/section-1107/ · https://law.justia.com/codes/california/code-lab/division-2/part-3/chapter-5-1/section-1107-1/ · https://law.justia.com/codes/california/code-lab/division-2/part-3/chapter-5-1/section-1107-2/ | 21 Nov 2026 | Mirror (U-01, U-02) |
-| public.law, Lab. Code §1107.1 | https://california.public.law/codes/labor_code_section_1107.1 | 21 Nov 2026 | Mirror (U-02) |
+| Justia, Civ. Code §3111 | https://law.justia.com/codes/california/code-civ/division-3/part-4/title-15-2/section-3111/ | 21 Nov 2026 | Mirror — superseded by the leginfo read 24 Nov 2026 (U-04 closed) |
+| Justia, Civ. Code §3110 | https://law.justia.com/codes/california/code-civ/division-3/part-4/title-15-2/section-3110/ | 21 Nov 2026 | Mirror — still the only read; §3110 not opened 24 Nov 2026 (U-04 closed) |
+| Justia, Lab. Code §§1107, 1107.1, 1107.2 | https://law.justia.com/codes/california/code-lab/division-2/part-3/chapter-5-1/section-1107/ · https://law.justia.com/codes/california/code-lab/division-2/part-3/chapter-5-1/section-1107-1/ · https://law.justia.com/codes/california/code-lab/division-2/part-3/chapter-5-1/section-1107-2/ | 21 Nov 2026 | Mirror — superseded by the SEC. 4 chaptered-text read on leginfo 24 Nov 2026 (U-01, U-02 closed) |
+| public.law, Lab. Code §1107.1 | https://california.public.law/codes/labor_code_section_1107.1 | 21 Nov 2026 | Mirror — superseded by the SEC. 4 chaptered-text read on leginfo 24 Nov 2026 (U-02 closed) |
 | Orrick, AB 1405 chaptered text (PDF) | https://media.orrick.com/Media%20Library/public/files/ailawcenter/2026/ca-ab-1405.pdf | 21 Nov 2026 | Secondary — law firm (U-16) |
 | Orrick, SB 813 chaptered text (PDF) | https://media.orrick.com/Media%20Library/public/files/ailawcenter/2026/09/ca-ab-813.pdf | 21 Nov 2026 | Secondary — law firm (U-15). Note: the file is named "ca-ab-813" but the document is Senate Bill No. 813, Ch. 179 — confirmed by reading it |
-| Sidley, SB 1000 chaptered text (PDF mirror) | https://www.sidley.com/-/media/resource-pages/ai-monitor/laws-and-regulations/enacted-california-sb-1000-california-ai-transparency-act-amendments.pdf | 21 Nov 2026 | Mirror (U-14) |
-| CapitolTrack, SB 947 chaptered text (Ch. 859, PDF mirror) | Mirror read; URL not recorded; unconfirmed | 21 Nov 2026 | Mirror, read in full (U-13) |
-| GitHub mirror, AB 853 chaptered text | Mirror read; URL not recorded; unconfirmed | 21 Nov 2026 | Mirror (U-14) |
+| Sidley, SB 1000 chaptered text (PDF mirror) | https://www.sidley.com/-/media/resource-pages/ai-monitor/laws-and-regulations/enacted-california-sb-1000-california-ai-transparency-act-amendments.pdf | 21 Nov 2026 | Mirror — superseded by the leginfo read 24 Nov 2026 (U-14 closed) |
+| CapitolTrack, SB 947 chaptered text (Ch. 859, PDF mirror) | Mirror read; URL not recorded; unconfirmed | 21 Nov 2026 | Mirror — superseded by the leginfo direct read 24 Nov 2026 (U-13 closed) |
+| GitHub mirror, AB 853 chaptered text | Mirror read; URL not recorded; unconfirmed | 21 Nov 2026 | Mirror — superseded by the leginfo read 24 Nov 2026 (U-14 closed) |
 | Ars Technica, X.AI v. Bonta order (Dkt. 35, PDF mirror) | https://cdn.arstechnica.net/wp-content/uploads/2026/03/xAI-v-Bonta-Order-Denying-Preliminary-Injunction-3-4-26.pdf | 21 Nov 2026 | Mirror of the filed order; corroborated by the CourtListener stipulation below |
 | CourtListener, X.AI v. Bonta Dkt. 36 stipulation | https://storage.courtlistener.com/recap/gov.uscourts.cacd.1000848/gov.uscourts.cacd.1000848.36.0.pdf | 21 Nov 2026 | Mirror; states the court denied the motion on 4 March 2026 |
 

@@ -35,23 +35,18 @@ Five items were verified against the source itself on 21 November 2026:
    mandatory verification oversight was read in full from the official
    GovOps PDF. It is a proposal, not law.
 
-## Still open — 16 items
+## Still open — 10 items
 
 The full table, with the exact check that would close each item, is in
 [triage.md](triage.md#open-items). In short:
 
-- **U-01–U-02** — Lab. Code §§1107–1107.2 (SB 53 whistleblower chapter):
-  official text not read; content checked via mirrors with no discrepancy
-  found.
 - **U-03** — CalOES TFAIA Portal: the portal's existence and its link from
   the official CalOES page are confirmed; the portal itself was not opened.
-- **U-04** — Codified Civ. Code §§3110–3111 (AB 2013): verified via the
-  Justia mirror only.
 - **U-05** — Ninth Circuit decision, No. 26-1591: we could not find a
   decision as of 21 November 2026; dated re-check.
 - **U-06** — §7157 / §7124 submission portals: we could not find one live
   on cppa.ca.gov, 21 November 2026.
-- **U-07** — Codified BPC §§22757.1–22757.6 (SB 942): direct read not done.
+- **U-07** — Codified BPC §§22757.1–22757.6 (SB 942): direct read not done; §22757.3 codified page opened 24 Nov 2026.
 - **U-08** — AG §22757.3(c) report-receipt mechanism: we could not find
   evidence it exists as of 21 November 2026.
 - **U-09** — Codified Lab. Code §§1520–1526.7 (SB 947): direct read not
@@ -60,19 +55,13 @@ The full table, with the exact check that would close each item, is in
   any as of 21 November 2026; dated re-check.
 - **U-11** — Codified Gov. Code §§8898–8898.4 and §§11549.80–11549.86
   (SB 813 / AB 1405): direct read not done.
-- **U-12** — SB 53 chaptered text (BPC §§22757.10–22757.16): direct read
-  of the official leginfo bill text not confirmed.
-- **U-13** — SB 947 chaptered text (Ch. 859): direct read of the official
-  leginfo bill text not confirmed; full text read via a chaptered-text
-  mirror, 21 November 2026.
-- **U-14** — SB 942 amendments chaptered texts (SB 1000, AB 853,
-  AB 2713): direct reads of the official leginfo bill texts not confirmed;
-  AB 853 text read via a mirror.
 - **U-15** — SB 813 chaptered text (§§8898–8898.4): direct read not
   confirmed; bill status page opened; chaptered text not read from the
   official source. Text also read via the Orrick mirror.
 - **U-16** — AB 1405 official text (§§11549.80–11549.86): read only via
   the Orrick law-firm PDF, 21 November 2026.
+
+Closed: U-01 — Lab. Code §1107.2 confirmed by the SEC. 4 chaptered-text read on leginfo 24 Nov 2026; single interpretive sentence, no standalone developer duty. U-02 — Lab. Code §§1107–1107.1 read via SEC. 4 on leginfo 24 Nov 2026; substance matches the mirror reading. U-04 — §3111 read directly on leginfo 24 Nov 2026; matches the mirror reading. U-12 — SB 53 chaptered text read directly on leginfo 24 Nov 2026; substance matches; 39 rows upgraded to High. U-13 — SB 947 chaptered text read directly on leginfo 24 Nov 2026; substance matches; codified LAB §1520 pages not opened (U-09 still open). U-14 — SB 942 amendment chaptered texts read directly on leginfo 24 Nov 2026; substance matches, with the §22757.3/AB 853 citation corrected. See [triage.md](triage.md#closed).
 
 ## What the mirrors are
 
@@ -82,11 +71,6 @@ data (`Source_Type` in
 [data/ca_mappings.csv](../data/ca_mappings.csv)) and kept at Medium
 confidence:
 
-- **AB 2013 codified §§3110–3111** — Justia mirror (U-04).
-- **SB 53 Lab. Code §§1107–1107.1** — public.law mirror, cross-checked
-  against Justia and the Attorney General's SB 53 page (U-02).
-- **SB 947 chaptered text** — chaptered-text mirror (U-13).
-- **SB 942 AB 853 chaptered text** — mirror (U-14).
 - **SB 813 chaptered text** — Orrick mirror (U-15).
 - **AB 1405 chaptered text** — Orrick law-firm PDF (U-16).
 - **AB 2013 preliminary-injunction order** — mirror copy of the
@@ -95,7 +79,7 @@ confidence:
 ## Official pages that could not be read directly
 
 The leginfo codified pages could not be read automatically; open them in a
-browser. That is the remaining step for U-01, U-02, U-04, U-07, U-09, and
+browser. That is the remaining step for U-07, U-09, and
 U-11. The exact pages are listed in [sources.md](sources.md). The CPPA
 website is JavaScript-driven, so a text read shows limited content — a
 browser check of its full navigation is the remaining step for U-06.

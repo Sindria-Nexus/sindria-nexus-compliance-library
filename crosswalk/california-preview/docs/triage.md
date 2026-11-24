@@ -307,28 +307,33 @@ qualification on any duty. Re-check at each quarterly review.
 
 ## Open items
 
-Sixteen things are still unverified. They are listed here so the preview
+Ten things are still unverified. They are listed here so the preview
 can be corrected in public. "What to check" is the exact step that would
 close the item.
 
 | ID | What is unverified | What to check |
 |---|---|---|
-| U-01 | Lab. Code §1107.2 content — official text unread; content substantively answered via Justia (a single interpretive sentence; loss of equity value does not count as damage to property; no developer duty) | Read SEC. 4 of the SB 53 chaptered text, or the leginfo codified LAB §1107.2 page, in a browser |
-| U-02 | Lab. Code §§1107–1107.1 against the official text — mirror only; no discrepancy found | Read SEC. 4 of the leginfo chaptered text |
 | U-03 | CalOES TFAIA Portal submission flow — portal not opened | Open the portal via the [CalOES reporting page](https://www.caloes.ca.gov/office-of-the-director/operations/homeland-security/california-cybersecurity-integration-center/transparency-in-frontier-ai-act-reporting/) and confirm both submission paths accept filings |
-| U-04 | Leginfo codified Civ. Code §§3110–3111 — verified via the Justia mirror only | Open the leginfo code-section pages for CIV §§3110–3111 in a browser |
 | U-05 | Ninth Circuit decision, No. 26-1591 — argued 18 Nov 2026; we could not find a decision as of 21 Nov 2026 | Check the Ninth Circuit opinions page before attorney review |
 | U-06 | §7157 / §7124 submission portals live — we could not find one on cppa.ca.gov, 21 Nov 2026 | Check the CPPA website for the submission and certification portals before 1 Apr 2028 |
-| U-07 | Codified BPC §§22757.1–22757.6 direct read | Open the leginfo code-section pages in a browser |
+| U-07 | Codified BPC §§22757.1–22757.6 direct read; §22757.3 codified page opened 24 Nov 2026, §§22757.1, 22757.2, 22757.4, 22757.5, 22757.6 not yet opened | Open the leginfo code-section pages in a browser |
 | U-08 | Whether the AG §22757.3(c) report-receipt mechanism exists — we could not find one on oag.ca.gov, 21 Nov 2026 | Search oag.ca.gov and leginfo for the mechanism |
 | U-09 | Codified Lab. Code §§1520–1526.7 display — we could not find a codified mirror as of 21 Nov 2026 | Open the leginfo code-section pages in a browser |
 | U-10 | Labor Commissioner guidance on SB 947 — we could not find any; re-checked 21 Nov 2026 | Check dir.ca.gov / Labor Commissioner publications before publication and before 1 Jul 2027 |
 | U-11 | Codified Gov. Code §§8898–8898.4 and §§11549.80–11549.86 | Open the leginfo code-section pages in a browser |
-| U-12 | SB 53 chaptered text (BPC §§22757.10–22757.16) — direct read of the official leginfo bill text not confirmed | Open the leginfo bill text page for SB 53 in a browser and confirm the chapter text |
-| U-13 | SB 947 chaptered text (Ch. 859) — direct read of the official leginfo bill text not confirmed; full text read via a chaptered-text mirror, 21 Nov 2026 | Open the leginfo bill text page for SB 947 in a browser and confirm the operative text |
-| U-14 | SB 942 amendments chaptered texts (SB 1000, AB 853, AB 2713) — direct reads of the official leginfo bill texts not confirmed; AB 853 text read via a mirror | Open the leginfo bill text pages for SB 1000, AB 853, and AB 2713 in a browser and confirm the amended §§22757.1–22757.6 text |
 | U-15 | SB 813 chaptered text (§§8898–8898.4) — bill status page opened; chaptered text not read from the official source. Text also read via the Orrick mirror | Open the leginfo bill text page for SB 813 in a browser and confirm the chaptered text |
 | U-16 | AB 1405 official text (§§11549.80–11549.86) — read only via the Orrick law-firm PDF, 21 Nov 2026 | Open the leginfo bill text page for AB 1405 in a browser and confirm the chaptered text |
+
+## Closed
+
+| ID | What was verified | Closed |
+|---|---|---|
+| U-01 | Lab. Code §1107.2 confirmed by the SEC. 4 chaptered-text read on leginfo: a single interpretive sentence — loss of equity value does not count as damage to or loss of property; no standalone affirmative developer duty in §1107.2. No requirement row. | 24 Nov 2026 |
+| U-02 | Lab. Code §§1107–1107.1 read via SEC. 4 of the SB 53 chaptered text on leginfo; substance matches the mirror reading (disclosure protections, anti-retaliation, notice, anonymous internal process, burden-shifting, injunctive relief, attorney's fees). | 24 Nov 2026 |
+| U-04 | Codified Civ. Code §3111 read directly on leginfo; matches the Justia mirror reading. §3110 was not opened (scope context only; no requirement row). | 24 Nov 2026 |
+| U-12 | SB 53 chaptered text (BPC §§22757.10–22757.16) read directly on leginfo; substance matches the text checked (definitions and thresholds, frontier AI framework, transparency reports, internal-use summaries, false-statement ban and redactions, incident reporting, enforcement). 46 mapping rows now 'Official text read'; 39 upgraded to High. | 24 Nov 2026 |
+| U-13 | SB 947 chaptered text (Ch. 859) read directly on leginfo; substance matches the text checked (ADS definition and exclusions §1520(c), prohibited uses §1522(a), no-sole-reliance and human corroboration §1522(b)–(c), data-description right §1522(d)–(e), post-use notice §1524, anti-retaliation §1526, $500/violation penalty §1526.1(e), CBA waiver §1526.5, federal aviation/defense/space carve-out §1526.6). Codified LAB §1520 (and §§1521–1526.7) code pages were not opened (U-09 still open). | 24 Nov 2026 |
+| U-14 | SB 942 amendment chaptered texts (SB 1000, AB 853, AB 2713) read directly on leginfo; substance matches the text checked. One correction: §22757.3 was not amended by AB 853 — citation and Notes fixed. §22757.3 codified page also opened 24 Nov 2026 (U-07 still open). | 24 Nov 2026 |
 
 ---
 

@@ -26,7 +26,6 @@ General's office for SB 53.
 Some rows rest on a mirror or a secondary document as the sole source for
 the text they encode, because the official page could not be read directly:
 
-- **AB 2013 codified §§3110–3111** — Justia mirror (U-04).
 - **SB 53 Lab. Code §§1107–1107.1** — public.law mirror (U-02).
 - **AB 1405 chaptered text** — Orrick law-firm PDF (U-16).
 
@@ -43,22 +42,25 @@ what is still open.
 
 - **High** — the requirement's text was read directly in an official
   source, the ISO control's scope was confirmed from a public description,
-  and no open item bears on that requirement. 33 of the 123 mappings are
-  High: 28 rows resting on the official CPPA approved text and 5 rows
-  resting on the official CRD Final Text. The 28 CPPA rows were held at
+  and no open item bears on that requirement. 72 of the 123 mappings are
+  High: 28 rows resting on the official CPPA approved text, 5 rows
+  resting on the official CRD Final Text, and 39 rows resting on the SB 53
+  chaptered text read directly on leginfo 24 November 2026. The 28 CPPA rows were held at
   Medium pending a spot-check; the spot-check was confirmed 24 November
   2026 and they upgraded to High.
 - **Medium** — everything else. Medium explicitly covers four cases: a
   text read through a mirror, a text read through a secondary document
   (such as a law-firm PDF), an official source whose direct read is not
   confirmed, and an official read where an open item bears on the
-  requirement. The last case covers four rows: the two mappings of
+  requirement. The last case covers eleven rows: the two mappings of
   CA-ADMT-7157 and the two of CA-CCPA-CYBER-7124, where the submission
-  portals (U-06) are part of the requirement and could not be found.
+  portals (U-06) are part of the requirement and could not be found, and
+  the seven mappings of CA-SB53-22757-12D and CA-SB53-22757-13, where the
+  CalOES submission portal (U-03) has not been opened.
   Medium does not mean the mapping is wrong; it means the underlying text
   was not read directly in the official source, or an open item still
   bears on it, so the mapping should be checked against the official text
-  before it is relied on. 90 of the 123 mappings are Medium.
+  before it is relied on. 51 of the 123 mappings are Medium.
 
 ## How a requirement was built
 

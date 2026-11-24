@@ -5,10 +5,10 @@
 
 ## The files
 
-- `ca_requirements.csv` — 39 requirements from seven California laws.
+- `ca_requirements.csv` — 40 requirements from seven California laws.
 - `ca_mappings.csv` — 123 mappings of those requirements to ISO/IEC 42001
-  controls: 88 Partial, 35 None, 0 Full. Confidence: 33 High, 90 Medium.
-- 16 open items (U-01–U-16) are listed in
+  controls: 88 Partial, 35 None, 0 Full. Confidence: 72 High, 51 Medium.
+- 10 open items (U-03, U-05–U-11, U-15–U-16) are listed in
   [triage.md](../docs/triage.md#open-items) and
   [source-verification.md](../docs/source-verification.md).
 
@@ -52,30 +52,33 @@ the open-items list, not on the row.
 
 | Value | What it means | Rows |
 |---|---|---|
-| Official text read | The text was read directly in an official source. | 37 |
-| Official URL cited; direct read not confirmed | The URL is the official location of the text, but no direct read of the official page is established. The text behind the row was checked another way (a mirror or a cross-check). Each such source group has an open item. | 70 |
-| Mirror | The text was read through a mirror of the official text (e.g. Justia, public.law). | 14 |
+| Official text read | The text was read directly in an official source. | 119 |
+| Official URL cited; direct read not confirmed | The URL is the official location of the text, but no direct read of the official page is established. The text behind the row was checked another way (a mirror or a cross-check). Each such source group has an open item. | 2 |
+| Mirror | The text was read through a mirror of the official text (e.g. Justia, public.law). | 0 |
 | Secondary (law firm) | The text was read through a law-firm document (Orrick PDF). | 2 |
 
 ## Confidence
 
 - **High** — the requirement's text was read directly in an official
   source, the ISO control's scope was confirmed from a public description,
-  and no open item bears on that requirement. 33 rows: 28 resting on the
-  official CPPA approved text and 5 resting on the official CRD Final
-  Text. The 28 CPPA rows were held at Medium pending a spot-check; the
+  and no open item bears on that requirement. 72 rows: 28 resting on the
+  official CPPA approved text, 5 resting on the official CRD Final
+  Text, and 39 resting on the SB 53 chaptered text read directly on
+  leginfo 24 November 2026. The 28 CPPA rows were held at Medium pending a spot-check; the
   spot-check was confirmed 24 November 2026 and they upgraded to High.
 - **Medium** — everything else. Medium explicitly covers four cases: a
   text read through a mirror, a text read through a secondary document,
   an official source whose direct read is not confirmed, and an official
   read where an open item bears on the requirement. The last case covers
-  four rows: the two mappings of CA-ADMT-7157 and the two of
+  eleven rows: the two mappings of CA-ADMT-7157 and the two of
   CA-CCPA-CYBER-7124, where the submission portals (U-06) are part of the
-  requirement and could not be found. Medium does not mean the mapping is
+  requirement and could not be found, and the seven mappings of
+  CA-SB53-22757-12D and CA-SB53-22757-13, where the CalOES submission
+  portal (U-03) has not been opened. Medium does not mean the mapping is
   wrong; it means the underlying text was not read directly in the
   official source, or an open item still bears on it, so the mapping
   should be checked against the official text before it is relied on.
-  90 rows.
+  51 rows.
 
 This definition is the same in the README, the methodology, and this file.
 
