@@ -1,140 +1,149 @@
-# California AI Controls Preview — Sindria Nexus Crosswalk
+# California AI Laws x ISO/IEC 42001 Controls — Preview
 
-**Version:** v0.1-preview · **Last verified:** 21 November 2026
+> **NOT YET ATTORNEY-REVIEWED.** This is a public preview, not legal advice.
+> It maps seven California AI laws against ISO/IEC 42001 controls so you can
+> see where the controls help and where they don't. It is not a compliance
+> opinion, and it is not a substitute for advice from a California-licensed
+> attorney.
 
-> **NOT YET ATTORNEY-REVIEWED.** This preview has not been reviewed by a
-> California-licensed attorney. It is an educational starting point, not legal
-> advice and not a substitute for advice tailored to your company. Do not rely
-> on it as a compliance determination.
+**Version:** v0.1-preview
+**Last verified:** 21 November 2026
+**Next check:** 18 February 2027
+**License:** CC BY 4.0 (see [LICENSE](LICENSE))
 
-## What this is
+## Does this apply to you?
 
-A free sample of the Sindria Nexus crosswalk: California's AI laws mapped to
-ISO/IEC 42001 controls, so a startup can see, law by law, which of its
-governance controls help with each duty — and where the gaps are.
+| Law | Screening result | Who it covers | Key date |
+|---|---|---|---|
+| AB 2013 — AI training-data transparency | Likely applies if you built a generative AI system Californians can use | Anyone who designs, codes, produces, or substantially modifies a generative AI system for public use | In force; first postings due 1 Jan 2026 |
+| SB 942 — AI Transparency Act | Likely applies if you create, code, or otherwise produce a generative AI system publicly accessible in California | Covered providers, large online platforms, GenAI hosting platforms, capture-device makers | Operative 2 Aug 2026; platform duties 1 Jan 2027 |
+| CCPA ADMT / risk-assessment / cybersecurity-audit regulations | Applies only if you are a CCPA-covered business and do at least one of six trigger activities | CCPA-covered businesses doing significant-risk processing | In force 1 Jan 2026; first submissions 1 Apr 2028 |
+| FEHA employment ADS regulations | Likely applies if you regularly employ 5+ people and use an automated-decision system in hiring or employment decisions in California | Employers regularly employing five or more people | In force 1 Oct 2025 |
+| SB 947 — No Robo Bosses Act | Applies only if you use an automated-decision system for discipline or termination decisions, and not before 1 Jul 2027 | Employers using an ADS for discipline or termination decisions | Operative 1 Jul 2027 |
+| SB 53 — Transparency in Frontier AI Act | Probably not: applies to developers who trained a frontier model | Frontier developers; large frontier developers for the framework duties | In force 1 Jan 2026 |
+| SB 813 / AB 1405 — AI verification bodies and auditors | Probably not: voluntary for most organisations; mandatory registration only for AI auditors from 1 Jan 2029 | Government Operations Agency and AI auditors; organisations are not required to engage an auditor | Effective 1 Jan 2027; registry and registration bar 1 Jan 2029 |
 
-- **39 California requirements** across **7 laws**, mapped to ISO/IEC 42001
-  controls in **123 mappings: 88 Partial, 35 None, 0 Full**. There are no Full
-  mappings anywhere in this module: an ISO 42001 control can help with a
-  California duty, but no control satisfies any duty on its own.
-- **Confidence:** 2 High / 121 Medium (see `docs/source-verification.md`).
-- **11 items are still UNVERIFIED** (U-01–U-11) — carried openly, not hidden.
-  See `docs/source-verification.md` for the list and what would close each one.
+The screening result is a starting point, not a verdict. [Read the full
+triage](docs/triage.md) for who each law covers, the questions to ask
+yourself, key dates, and which ISO controls help.
 
-### A correction to the count
+## What this preview is
 
-An earlier version of this module listed **17** California requirements. That
-count was wrong: a line-by-line audit found 9 blockers in those 17 rows,
-including a wrong operative date for the CCPA risk-assessment duty, and
-material duties with no row at all. The corrected module has **39
-requirements** — this preview publishes the corrected 39, not the stale 17.
+- **39 requirements** from seven California laws, mapped to ISO/IEC 42001
+  controls in **123 mappings**: 88 Partial, 35 None, 0 Full. No control fully
+  satisfies a California requirement on its own — the laws and the standard
+  do different jobs.
+- **33 High / 90 Medium confidence.** High means the requirement's text
+  was read directly in an official source, the ISO control's scope was
+  confirmed from a public description, and no open item bears on that
+  requirement. Medium covers everything else: reads through a mirror or a
+  secondary document, official sources whose direct read is not confirmed,
+  and official reads where an open item bears on the requirement (four
+  rows). The 28 rows resting on the official CPPA approved text were held
+  at Medium pending a spot-check; the spot-check was confirmed 24 November
+  2026 and they are now High. See [methodology](docs/methodology.md).
+- **16 open items.** Sixteen things are still unverified — mostly direct
+  reads of official texts that could not be opened, and two submission
+  portals we could not find live. They are listed openly in
+  [triage](docs/triage.md#open-items) and
+  [source verification](docs/source-verification.md). Nothing is hidden
+  behind a confidence score.
 
-The preview also covers **7 laws, not 6**: SB 813 and AB 1405 (AI verification
-bodies and the AI Auditor Registry) are included alongside AB 2013, SB 942,
-the CCPA ADMT rules, FEHA, SB 947, and SB 53.
+## Federal preemption
 
-## Triage: does this apply to a typical startup?
+As of 21 November 2026, we could not find a federal statute that preempts
+a California AI law, and we could not find a court decision holding one
+preempted. An executive order (EO 14365, 11 December 2025) directs a
+Justice Department task force and a Commerce Department evaluation, but an
+executive order does not preempt state law by itself. On 5 November 2026
+DOJ announced the Super Intelligence Task Force, which folds in the AI
+Litigation Task Force and coordinates DOJ's AI-related enforcement; it has
+announced no new case against any state AI law. This is a watch item, not
+a current qualification on any duty. The full position, with dates and
+sources, is in [triage](docs/triage.md#federal-preemption).
 
-"Typical startup" means a small US B2B SaaS/AI company, seed to Series B,
-roughly 10–100 people, selling to enterprises, with no SOC 2 attestation yet.
-It builds software (often AI features or a GenAI product), hires in California
-or screens California applicants, and processes customer and employee data. It
-does not train frontier-scale models and does not have $500M in revenue.
+## How to use it
 
-| Law | Who it covers | Does it apply to me? | Key dates | ISO 42001 controls that help | Verdict |
-|---|---|---|---|---|---|
-| **AB 2013** — AI Training Data Transparency Act (Civ. Code §§3110–3111) | Developers of generative AI systems made publicly available to Californians. **No size threshold** — a two-person startup is covered if it built the system. Systems and substantial modifications released on or after 1 Jan 2022. | Did you build a generative AI system Californians can use? If yes, you owe the training-data summary. | Effective **1 Jan 2025**. First §3111 postings due **1 Jan 2026**. Litigation: *X.AI v. Bonta* — preliminary injunction denied 4 Mar 2026; Ninth Circuit No. 26-1591 argued 18 Nov 2026, no decision as of 21 Nov 2026. The statute remains in force. | 10 controls — full list in `docs/triage.md` | **Applies** — if you built a GenAI system Californians can use |
-| **SB 942** — California AI Transparency Act (Bus. & Prof. Code §§22757–22757.6, as amended by AB 853, SB 1000, AB 2713) | Covered providers: a person that creates, codes, or otherwise produces a GenAI system publicly accessible within California. The former 1,000,000-monthly-user threshold is gone — size no longer matters. | Did you create, code, or otherwise produce a generative AI system people in California can use? If yes: you owe a latent disclosure in AI-generated content and a free disclosure verification tool. | Chapter operative **2 Aug 2026**. Large online platform and hosting platform duties **1 Jan 2027**. Capture device duties **1 Jan 2028**. Penalties: $5,000 per violation, each day a discrete violation. | 3 controls — full list in `docs/triage.md` | **Applies** — if you create, code, or otherwise produce a GenAI system publicly accessible in California |
-| **CCPA ADMT / risk-assessment / cybersecurity-audit regulations** (11 CCR §§7001, 7120–7124, 7150–7157, 7200, 7220–7222) | CCPA-covered businesses only, plus a trigger. A "business" meets at least one test: annual gross revenue above **$26,625,000**; annually buys, sells or shares personal information of **100,000+ consumers or households**; or derives **50%+ of annual revenue** from selling or sharing personal information. Then one of six §7150(b) triggers must apply (selling/sharing PI; processing sensitive PI; using ADMT for a significant decision; automated profiling of applicants, students, employees or contractors; inferences from presence in a sensitive location; processing PI to train ADMT for a significant decision or identity tech). | Is your revenue above $26,625,000 — or do you touch 100,000+ California consumers' data, or get half your revenue from selling/sharing personal information? If none, you are not a CCPA business yet. If yes, do you do any of the six trigger activities? If yes to any, a risk assessment is required **before you start** the processing. | Regulations effective **1 Jan 2026**. Risk assessment before initiating new §7150(b) processing from 1 Jan 2026; processing begun before 1 Jan 2026 and still running must be assessed by **31 Dec 2027**. Article 11 (pre-use notice, opt-out, access) from **1 Jan 2027**. First §7157 submission by **1 Apr 2028**. | 18 controls — full list in `docs/triage.md` | **Only if** you are a CCPA-covered business and do one of the six trigger activities |
-| **FEHA employment ADS regulations** (2 CCR §§11008–11017.1) | California employers regularly employing **5 or more people**, counting part-time and out-of-state employees. An automated-decision system is a computational process (including AI/ML/algorithmic techniques) that makes a decision about an employment benefit or facilitates a human decision about one — resume screening, computer-based assessments, interview analysis, targeted job ads, third-party applicant/employee data analysis. | Do you regularly employ 5 or more people, with California employees or California applicants? Do you use an automated-decision system anywhere in hiring or employment? If yes to both, these regulations already apply to you. | In force **1 Oct 2025**. Personnel and employment records, expressly including selection criteria and ADS data, preserved at least **4 years**. | 4 controls — full list in `docs/triage.md` | **Applies** — if you employ 5+ people and use an ADS in hiring or employment in California |
-| **SB 947** — No Robo Bosses Act (Lab. Code Part 5.5.5, §§1520–1526.7) | All employers using an automated decision system. **No size threshold and no small-employer exemption.** The duties bite only where an ADS is used for a **discipline or termination decision**. Three uses are banned for any ADS use: breaching labor, health-and-safety, employment or civil-rights law; inferring an employee's protected status; predicting and acting adversely against a worker for exercising legal rights. | Do you use an automated-decision system for discipline or termination decisions? If yes, the duties start 1 Jul 2027. If you only use AI in hiring, SB 947 is not your law — that is FEHA. | Operative **1 Jul 2027**. Civil penalty **$500 per violation**. "Primarily relies" is not defined in the statute and no Labor Commissioner guidance exists yet as of 21 Nov 2026. | 4 controls — full list in `docs/triage.md` | **Only if** you use an ADS for discipline or termination decisions — and not before 1 Jul 2027 |
-| **SB 53** — Transparency in Frontier AI Act (Bus. & Prof. Code §22757.10 ff.; Lab. Code §§1107–1107.2) | **Frontier developers only.** A frontier model is a foundation model trained with more than 10^26 operations. A frontier developer is a person who trained or initiated training of one. A **large** frontier developer has collective annual gross revenue above **$500M** (with affiliates). **No duty falls on a deployer** — using someone else's frontier model does not make you a frontier developer. | Did you train (or start training) a foundation model using more than 10^26 operations? If no, SB 53 does not apply to you, however much AI you use. | In force **1 Jan 2026**. Critical safety incident reported to CalOES within **15 days** of discovery. AG civil penalty up to **$1M per violation** (large developers); no private right of action. | 31 controls — full list in `docs/triage.md` | **Probably not** — only if you trained a frontier model |
-| **SB 813 / AB 1405** — AI verification bodies and auditors (Gov. Code §§8898–8898.4; §§11549.80–11549.86) | **Voluntary framework — no duty on an organisation unless it chooses to engage.** The Government Operations Agency designates independent verification organisations (SB 813) and runs an AI Auditor Registry (AB 1405). **No organisation is required to engage a designated organisation or undergo a covered AI audit.** From 1 Jan 2029, no person may offer, sell, or conduct a covered AI audit unless registered. | Do you offer or sell AI audit services in California? If yes, you must register from 1 Jan 2029. Do you want a designated independent verification organisation to assess your AI system? That is voluntary — nothing requires it. | Effective **1 Jan 2027**. IVO designation criteria published by **1 Jan 2028**. Auditor Registry established by **1 Jan 2029**; registration bar from 1 Jan 2029. | 1 control — full list in `docs/triage.md` | **Probably not** — only if you sell AI audit services or choose to engage a designated verifier |
+1. **Start with the triage** ([docs/triage.md](docs/triage.md)) — it tells
+   you which laws are likely to apply to you and what to ask yourself.
+2. **Check the data** ([data/ca_requirements.csv](data/ca_requirements.csv),
+   [data/ca_mappings.csv](data/ca_mappings.csv)) — the 39 requirements and
+   their 123 mappings, with the gap each mapping leaves and the evidence
+   examples an auditor would look for.
+3. **Check the sources** ([docs/sources.md](docs/sources.md)) — every
+   official source used, with the date it was checked and what could not be
+   confirmed.
+4. **Read the method** ([docs/methodology.md](docs/methodology.md)) —
+   how the mappings were built, what the confidence ratings mean, and what
+   this preview does not do.
 
-The full triage — the complete control lists, per-law notes, the verdict
-summary, and the UNVERIFIED items — is in `docs/triage.md`.
+## Limits
 
-**Federal preemption:** no federal statute preempts any California AI law as
-of 21 November 2026. Executive Order 14365 (11 Dec 2025) directs federal
-agencies to challenge state AI laws and asks Congress to pass a preemptive
-federal law, but it repeals nothing by itself. Congress has passed no such
-law. Preemption is a watch item, not a current qualification on any duty
-above.
+- **Seven laws, not every California AI-related law.** This preview covers
+  AB 2013, SB 942, the CCPA ADMT / risk-assessment / cybersecurity-audit
+  regulations, the FEHA employment ADS regulations, SB 947, SB 53, and
+  SB 813 / AB 1405. It does not cover any other California AI-related law.
+- **Not attorney-reviewed.** The contents have not been reviewed by a
+  California-licensed attorney.
+- **Five FEHA requirements have no ISO mapping yet** (CA-FEHA-11016,
+  CA-FEHA-11016-1, CA-FEHA-11016-2, CA-FEHA-11017-1, CA-FEHA-11072) —
+  they are requirements without a control row, not requirements that were
+  missed.
+- **The ISO/IEC 42001 control scope was confirmed from public descriptions
+  of the controls, not from the paid standard.** No text from the standard
+  is reproduced here — only clause numbers, control titles, and original
+  summaries.
+- **Dates are a snapshot.** Sources were verified on 21 November 2026
+  (see `Snapshot_Date` in the data files). Laws change; the next check is
+  18 February 2027.
+
+## How to cite this preview
+
+> California AI Laws x ISO/IEC 42001 Controls Preview, Sindria Nexus,
+> CC BY 4.0 — sindrianexus.com
+
+## Found an error?
+
+Open an issue at
+[github.com/Sindria-Nexus/sindria-nexus-compliance-library/issues](https://github.com/Sindria-Nexus/sindria-nexus-compliance-library/issues)
+with the law, the section, an official link, and the date you checked it.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for what a correction needs.
+
+## Disclaimer
+
+This preview is provided for general information only. It is not legal
+advice, and it does not create any attorney–client relationship. California
+AI law is changing quickly; check the official sources linked in
+[docs/sources.md](docs/sources.md) and get advice from a California-licensed
+attorney before acting on anything here. Sindria Nexus is not affiliated
+with ISO, IEC, or any government body.
 
 ## What's in this folder
 
 | File | What it is |
 |---|---|
-| `README.md` | This file — the triage table, the correction note, and what is not covered. |
-| `LICENSE` | Creative Commons Attribution 4.0 International (CC BY 4.0) for the material in this folder. |
-| `data/ca_requirements.csv` | 39 California requirements: citation, plain-language summary, theme, effective date, who it applies to, status. |
-| `data/ca_mappings.csv` | 123 mappings from ISO/IEC 42001 controls to those requirements: match strength, gap, evidence examples, rationale, source, confidence. |
-| `data/data-dictionary.md` | Column-by-column definitions for both CSVs. |
-| `docs/triage.md` | The full triage: complete control lists, per-law notes, verdict summary, UNVERIFIED items. |
-| `docs/methodology.md` | How this was built: evidence-first method, official sources first, what "Partial" and "None" mean, and the maintenance schedule. |
-| `docs/source-verification.md` | What was verified on 21 Nov 2026, what is still UNVERIFIED (U-01–U-11), and what would close each item. |
-
-## How to use it
-
-1. Start with the triage table above. Find the laws that apply to you.
-2. Open `data/ca_requirements.csv` and filter to those laws. Each row is one
-   duty, in plain language, with its citation and effective date.
-3. Open `data/ca_mappings.csv` and filter to the same requirements. Each
-   Partial mapping names the ISO 42001 control that helps, the gap (what the
-   control does *not* cover), and the evidence that would prove the control
-   operates. A None mapping is also information: that control does not help
-   with that duty.
-4. Treat the gaps as your to-do list. The crosswalk tells you where your
-   governance already reaches and where it stops — it does not do the work.
-
-## What this preview does NOT cover
-
-- **No Full mappings.** Nothing here says an ISO 42001 control satisfies a
-  California duty. Every Partial mapping has a gap, and the gap is the work.
-- **Five FEHA requirements have no ISO control mapped at all** —
-  CA-FEHA-11016, CA-FEHA-11016-1, CA-FEHA-11016-2, CA-FEHA-11017-1, and
-  CA-FEHA-11072 (pre-employment practices, adverse impact, criminal history,
-  and individualized assessment). The module does not yet say which controls
-  help with those duties.
-- **11 items are still UNVERIFIED** (U-01–U-11). The codified text of five
-  laws has not yet been read directly from leginfo, two submission portals
-  have not been confirmed live, and two re-checks are date-dependent. See
-  `docs/source-verification.md`.
-- **California only.** The full crosswalk also maps ISO/IEC 42001 to the EU AI
-  Act, the NIST AI Risk Management Framework, and Colorado SB 26-189. None of
-  those modules are in this preview.
-- **Not attorney-reviewed, not legal advice.** See the notice at the top of
-  this file.
+| [README.md](README.md) | This file |
+| [LICENSE](LICENSE) | CC BY 4.0 license for this folder |
+| [NOTICE.md](NOTICE.md) | Attorney-review status, not legal advice, preview status |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to report an error or propose a correction |
+| [CHANGELOG.md](CHANGELOG.md) | Version history for this preview |
+| [data/ca_requirements.csv](data/ca_requirements.csv) | The 39 California requirements |
+| [data/ca_mappings.csv](data/ca_mappings.csv) | The 123 mappings to ISO/IEC 42001 controls |
+| [data/data-dictionary.md](data/data-dictionary.md) | What every column in the CSVs means |
+| [docs/triage.md](docs/triage.md) | Per-law screening, key dates, ISO controls that help, open items |
+| [docs/methodology.md](docs/methodology.md) | How the mappings were built and what the ratings mean |
+| [docs/source-verification.md](docs/source-verification.md) | What was verified, what was not, and what to check |
+| [docs/sources.md](docs/sources.md) | Every official source used, with links and dates checked |
 
 ## The full crosswalk
 
-This preview is a free sample. The full Sindria Nexus crosswalk — all four
-frameworks, the complete requirement and mapping sets, and quarterly updates —
-plus the other state modules as they are published, are available from
-Sindria Nexus at [sindrianexus.com](https://sindrianexus.com). The full set is
-maintained as a living product with a quarterly check (next run 18 Feb 2027);
-this preview is updated when the underlying data changes.
-
-## License
-
-The material in this folder — the CSVs, the triage, and the methodology and
-verification notes — is licensed under the **Creative Commons Attribution 4.0
-International Public License (CC BY 4.0)**: share and adapt it, even
-commercially, as long as you give appropriate credit to Sindria Nexus, link to
-the license, and indicate if changes were made. See `LICENSE` in this folder.
-The rest of this repository is licensed under the MIT License — see the
-repository root `LICENSE`.
+This preview is the California module of a larger crosswalk (ISO/IEC 42001
+against the EU AI Act, the NIST AI Risk Management Framework, Colorado
+SB 26-189, and California). The full crosswalk is not published yet. The
+full crosswalk is in development; details at sindrianexus.com. The
+California module is published first as a standalone preview so it can be
+corrected in public before the full release.
 
 ## Changelog
 
-- **v0.1-preview (21 Nov 2026):** first public preview. 39 requirements, 123
-  mappings (88 Partial / 35 None / 0 Full), 7 laws. Corrected from the
-  workbook's 17 requirements (see "A correction to the count" above). 5 of 16
-  verification items closed in Fix Pass 2; 11 remain UNVERIFIED (U-01–U-11).
-  CalOES portal URL corrected from the Fix Pass 2 record to the URL the
-  CalOES page itself links (see `docs/source-verification.md`).
-
----
-
-*Built by Sindria Nexus. These materials are educational starting points, not
-legal advice and not a substitute for advice tailored to your company.*
+See [CHANGELOG.md](CHANGELOG.md).

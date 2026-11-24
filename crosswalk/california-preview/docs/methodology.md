@@ -1,103 +1,118 @@
-# Methodology — California preview
+# Methodology
 
-> **NOT YET ATTORNEY-REVIEWED.** This preview has not been reviewed by a
-> California-licensed attorney. It is an educational starting point, not legal
-> advice and not a substitute for advice tailored to your company.
+> **NOT YET ATTORNEY-REVIEWED.** This is a public preview, not legal advice.
+> **Last verified:** 21 November 2026. **Next check:** 18 February 2027.
 
-## Evidence first
+## What this preview does
 
-This crosswalk is built around the question an auditor or an enterprise buyer
-actually asks — never "do you have a policy?" but "show me it working." Every
-mapping names the evidence that would prove the control operates for the duty.
-A control with no evidence is a claim, not a control.
+It maps seven California AI laws against ISO/IEC 42001 controls: 39
+requirements, 123 mappings (88 Partial, 35 None, 0 Full). A Partial means
+the control helps with part of the requirement and leaves a gap, stated in
+the mapping's Gap field. A None means the control does not help at all. No
+control fully satisfies a California requirement on its own — the laws and
+the standard do different jobs, and the preview says so rather than
+forcing a fit.
 
-## Official sources first
+## Sources — official first
 
-Every requirement starts from the official text: the chaptered bill text on
-leginfo, the OAL-approved regulation text, or the filed Final Text from the
-issuing agency. Secondary sources (law-firm alerts, committee analyses,
-mirrors such as Justia or public.law) are used only to cross-check, never as
-the sole basis for a duty — and where the official text could not be read
-directly, the item is marked **UNVERIFIED** and listed in
-`docs/source-verification.md` rather than filled in from a secondary source.
+Official sources come first: the California Legislative Information
+system (leginfo) for chaptered bill text and codified sections, the
+California Privacy Protection Agency for the CCPA regulations, the Civil
+Rights Department for the FEHA regulations, the Office of Administrative
+Law for the register entry, the Governor's office and the Government
+Operations Agency for executive orders and reports, and the Attorney
+General's office for SB 53.
 
-Sources used for v0.1-preview, in order of preference:
+Some rows rest on a mirror or a secondary document as the sole source for
+the text they encode, because the official page could not be read directly:
 
-1. **leginfo.legislature.ca.gov** — chaptered bill texts (SB 53, SB 942 as
-   amended by AB 853 / SB 1000 / AB 2713, SB 947, SB 813, AB 1405, AB 2013).
-2. **cppa.ca.gov** — the approved CCPA regulation text (11 CCR §§7001,
-   7120–7124, 7150–7157, 7200, 7220–7222).
-3. **calcivilrights.ca.gov** — the CRD Final Text of the FEHA automated-decision
-   system regulations (2 CCR §§11008–11017.1), filed 27 Jun 2025, effective
-   1 Oct 2025; OAL Register 2025, No. 28-Z (11 Jul 2025), pp. 886–887.
-4. **govops.ca.gov** — the Government Operations Agency report "AI Safety in
-   2026 and Beyond" (SB 813 / AB 1405 context — a proposal, not law).
-5. **oag.ca.gov** — Attorney General pages (SB 53 context; the §22757.3(c)
-   report mechanism was searched and not found — see U-08).
-6. Named mirrors only where the official text was unreachable: Justia (Lab.
-   Code §1107.2 substance; Civ. Code §3111), public.law (Lab. Code §1107.1),
-   CourtListener (the *X.AI v. Bonta* stipulation). Each mirror use is flagged
-   in the row's Notes.
+- **AB 2013 codified §§3110–3111** — Justia mirror (U-04).
+- **SB 53 Lab. Code §§1107–1107.1** — public.law mirror (U-02).
+- **AB 1405 chaptered text** — Orrick law-firm PDF (U-16).
 
-## How a mapping is rated
+Those rows are labelled in the data (`Source_Type` in
+[data/ca_mappings.csv](../data/ca_mappings.csv)) and kept at Medium
+confidence. They are not presented as if the official text had been read.
+Every other row's source route is recorded the same way: `Source_Type` is
+"Official text read", "Official URL cited; direct read not confirmed",
+"Mirror", or "Secondary (law firm)". See [sources.md](sources.md) for the
+full source table and [source-verification.md](source-verification.md) for
+what is still open.
 
-Each (control, requirement) pair gets one of two ratings. There is no third
-rating in this module, deliberately: no ISO 42001 control satisfies a
-California duty on its own.
+## Confidence
 
-- **Partial** — the control helps with the duty. The `Gap` column states what
-  the control does *not* cover. The gap is the work.
-- **None** — the control does not help with this duty. A None rating is
-  information, not a failure: it stops a team from claiming coverage it does
-  not have.
+- **High** — the requirement's text was read directly in an official
+  source, the ISO control's scope was confirmed from a public description,
+  and no open item bears on that requirement. 33 of the 123 mappings are
+  High: 28 rows resting on the official CPPA approved text and 5 rows
+  resting on the official CRD Final Text. The 28 CPPA rows were held at
+  Medium pending a spot-check; the spot-check was confirmed 24 November
+  2026 and they upgraded to High.
+- **Medium** — everything else. Medium explicitly covers four cases: a
+  text read through a mirror, a text read through a secondary document
+  (such as a law-firm PDF), an official source whose direct read is not
+  confirmed, and an official read where an open item bears on the
+  requirement. The last case covers four rows: the two mappings of
+  CA-ADMT-7157 and the two of CA-CCPA-CYBER-7124, where the submission
+  portals (U-06) are part of the requirement and could not be found.
+  Medium does not mean the mapping is wrong; it means the underlying text
+  was not read directly in the official source, or an open item still
+  bears on it, so the mapping should be checked against the official text
+  before it is relied on. 90 of the 123 mappings are Medium.
 
-**Confidence** is separate from the rating:
+## How a requirement was built
 
-- **High** — the rating rests on a direct read of the official text with no
-  open codified-text leg. (2 rows in v0.1-preview.)
-- **Medium** — the rating is sound on the chaptered or approved text, but a
-  codified-text or portal check is still open. (121 rows.)
+Each requirement states the duty in plain language, cites the exact
+section, and records its effective or operative date. Each mapping states
+the control, the match (Partial or None), the gap the control leaves, and
+evidence examples — the records an auditor would look for. The ISO/IEC
+42001 control scope was confirmed from public descriptions of the
+controls, not from the paid standard. No text from the standard is
+reproduced here — only clause numbers, control titles, and original
+summaries.
 
-A rating is never upgraded on the strength of a secondary source alone.
+## California scope
+
+The preview covers seven laws: AB 2013, SB 942, the CCPA ADMT /
+risk-assessment / cybersecurity-audit regulations, the FEHA employment ADS
+regulations (2 CCR §§11008–11017.1, plus conforming amendment §11038 —
+§11038 repeats the §11009(f) formula and creates no separate duty row),
+SB 947, SB 53, and SB 813 / AB 1405. It does not cover any other
+California AI-related law. Five FEHA requirements have no ISO mapping yet
+(CA-FEHA-11016, CA-FEHA-11016-1, CA-FEHA-11016-2, CA-FEHA-11017-1,
+CA-FEHA-11072) — they are requirements without a control row.
 
 ## What "last verified" means
 
-"Last verified 21 November 2026" means: the sources named in
-`docs/source-verification.md` were read on or before that date, and the data
-reflects the law as it stood then. It does not mean the law has not changed
-since, and it does not mean every item was verified — 11 items were not (see
-U-01–U-11). Dates in the CSVs are the dates each source was accessed.
-
-## What was corrected before publication
-
-The module this preview is drawn from was audited line by line before
-publication. The audit found 9 blockers in the original 17 requirement rows —
-including a wrong operative date for the CCPA risk-assessment duty (the duty
-applies from the regulations' 1 Jan 2026 effective date, not 1 Jan 2027) — and
-material duties with no row at all. The corrected module has 39 requirements
-and 123 mappings. This preview publishes the corrected data. The full
-correction history is in the preview README's changelog note.
+"Last verified: 21 November 2026" is the date the sources in
+[sources.md](sources.md) were checked. The data files carry a
+`Snapshot_Date` of 2026-11-21 on every row. `Date_Accessed` in the
+mappings file is the date a source was actually read, where one is
+established; it is blank where no real access date is established — a blank
+is not a missing value to be filled in from the snapshot date.
 
 ## Maintenance
 
-The crosswalk is checked quarterly. The next scheduled run is **18 Feb 2027**
-(then roughly every three months). A run is brought forward if a checked item
-resolves — a Ninth Circuit decision in *X.AI v. Bonta* (No. 26-1591), Labor
-Commissioner guidance on SB 947, the SB 813 / AB 1405 chapters taking effect
-on 1 Jan 2027, or a §7157 / §7124 portal going live — or if a law is amended.
-Between runs, corrections are recorded in the README changelog with their
-dates.
+This preview is re-checked quarterly, next on 18 February 2027, and sooner
+if any of these happen:
+
+- **A dated re-check comes due:** U-05 (Ninth Circuit decision in
+  No. 26-1591) and U-10 (Labor Commissioner guidance on SB 947).
+- **The SB 813 / AB 1405 chapters take effect** (1 January 2027) — the
+  codified display (U-11) is best checked on or after that date.
+- **The §7157 / §7124 portals go live** (U-06) — the first submission
+  deadline is 1 April 2028.
+- **Any California amendment** to one of the seven laws, or a new
+  regulation or guidance under one of them.
+- **A court decision** affecting one of the seven laws — including any
+  decision in X.AI v. Bonta (AB 2013) or any federal preemption ruling.
 
 ## Limits
 
-- This is a **screening** tool, not a compliance determination. A Partial
-  mapping does not mean "compliant," and a None mapping does not mean "in
-  breach" — it means the control does not help with that duty.
-- **No federal preemption** applies to any California AI law as of
-  21 November 2026. That is a watch item: an executive order alone does not
-  preempt state law, and Congress has passed no preemptive federal AI law.
-- Thresholds are stated as they stood on 21 Nov 2026. The CCPA revenue
-  threshold ($26,625,000) is inflation-adjusted, next adjustment 1 Jan 2027.
-- Five FEHA requirements (CA-FEHA-11016, CA-FEHA-11016-1, CA-FEHA-11016-2,
-  CA-FEHA-11017-1, CA-FEHA-11072) have no ISO control mapped. The module does
-  not yet say which controls help with those duties.
+- This preview is not attorney-reviewed and is not legal advice.
+- It does not assess whether any organisation is compliant.
+- It does not cover federal law except for the preemption position in
+  [triage.md](triage.md#federal-preemption), which is a watch item, not a
+  legal conclusion.
+- The ISO/IEC 42001 control descriptions are original summaries, not
+  quotations from the standard.

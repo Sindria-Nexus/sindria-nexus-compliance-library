@@ -1,49 +1,89 @@
-# Data dictionary — California preview CSVs
+# Data dictionary
 
-Two files, one row per record. Both are UTF-8, comma-separated, with a header
-row. IDs are stable across versions: a requirement keeps its `Req_ID` and a
-mapping keeps its (`Control_ID`, `Req_ID`) pair unless the underlying law
-changes.
+> **NOT YET ATTORNEY-REVIEWED.** This is a public preview, not legal advice.
+> **Last verified:** 21 November 2026. **Next check:** 18 February 2027.
 
-## `data/ca_requirements.csv` — 39 rows
+## The files
 
-One row per California duty (or per distinct duty-bearing provision).
+- `ca_requirements.csv` — 39 requirements from seven California laws.
+- `ca_mappings.csv` — 123 mappings of those requirements to ISO/IEC 42001
+  controls: 88 Partial, 35 None, 0 Full. Confidence: 33 High, 90 Medium.
+- 16 open items (U-01–U-16) are listed in
+  [triage.md](../docs/triage.md#open-items) and
+  [source-verification.md](../docs/source-verification.md).
 
-| Column | Meaning |
+## `ca_requirements.csv`
+
+| Column | What it means |
 |---|---|
-| `Req_ID` | Stable ID. Format `CA-<LAW>-<CITATION>`, e.g. `CA-SB53-1107.1`, `CA-ADMT-7221`, `CA-FEHA-11072`. |
-| `Framework` | Always `California` in this preview. |
-| `Citation` | The law and section, e.g. `SB 53, Lab. Code §1107.1`. |
-| `Plain_Summary` | The duty in plain language. This is a summary, not the statutory text — read the cited section for the operative wording. |
-| `Theme` | Short topic label, e.g. `Whistleblower protections`, `Risk assessment`. |
-| `Effective_Date` | Date the duty takes effect, `YYYY-MM-DD`. For phased duties this is the date the first obligation bites; see `Notes` for the phase-in schedule. |
-| `Applies_To` | Who the duty falls on — the threshold, trigger, or class of person/organisation. |
-| `Status` | `In effect` (duty already operative), `Phased` (operative with a phase-in schedule — see `Notes`), or `Amended` (the cited section was amended after chaptering — see `Notes`). |
-| `Notes` | Verification detail: which official source the row was read from, what is still UNVERIFIED (U-01–U-11), cross-references, and attorney flags. |
+| Req_ID | Stable ID for the requirement, e.g. `CA-SB53-22757-12`. IDs never change. |
+| Framework | Always `California` in this preview. |
+| Citation | The exact section the requirement comes from, e.g. `Bus. & Prof. Code §22757.12`. |
+| Plain_Summary | The duty in plain language, written from the section text. |
+| Theme | A short label for the duty (e.g. "Frontier AI framework", "Pre-use notice"). |
+| Effective_Date | The date the duty takes effect, YYYY-MM-DD. For phased duties this is the date the duty in the row takes effect; the Notes field gives the other dates. |
+| Applies_To | Who the duty binds. |
+| Status | `In effect` (20), `Phased` (18 — the duty has later phase-in dates, given in Notes), or `Amended` (1). |
+| Notes | Context: related rows, litigation, verification notes, and open-item IDs where a source is a mirror, secondary, or unconfirmed. |
+| Snapshot_Date | 2026-11-21 on every row — the date the data was snapshotted. See below. |
 
-## `data/ca_mappings.csv` — 123 rows
+This file has no Reviewer column. Review of a requirement is recorded in
+the open-items list, not on the row.
 
-One row per (ISO/IEC 42001 control, California requirement) pair that was
-assessed. Pairs not listed were not assessed — absence from this file is not a
-rating.
+## `ca_mappings.csv`
 
-| Column | Meaning |
+| Column | What it means |
 |---|---|
-| `Control_ID` | ISO/IEC 42001 control ID, e.g. `6.1.2`, `A.7.5`. Clauses 4–10 use plain numbers; Annex A controls use the `A.` prefix. |
-| `Req_ID` | The California requirement this row assesses (joins to `ca_requirements.csv`). |
-| `Match_Strength` | `Partial` — the control helps with the duty but does not satisfy it; the gap is in `Gap`. `None` — the control does not help with this duty. There are no `Full` mappings in this module. |
-| `Gap` | For Partial mappings: what the control does *not* cover — the work that remains. For None mappings: why the control does not help. |
-| `Evidence_Examples` | The artifacts that would prove the control operates for this duty (e.g. published framework, assessment record, notification log). Examples, not an exhaustive evidence list. |
-| `Rationale` | Why this rating, tied to the cited text. |
-| `Source_URL` | The source the rating rests on — an official text (leginfo bill text, CPPA approved text, CRD Final Text) or a named mirror where the official text could not be read directly. |
-| `Date_Accessed` | Date the source was read, `YYYY-MM-DD`. All rows in v0.1-preview were last accessed 21 Nov 2026 or earlier. |
-| `Confidence` | `High` — the rating rests on a direct read of the official text with no open codified-text leg. `Medium` — the rating is sound on the chaptered or approved text, but a codified-text or portal check is still open. 2 High / 121 Medium in v0.1-preview. |
-| `Reviewer` | Blank by design. Filled only by the expert reviewer of a later pass — never by the builders of this preview. |
-| `Last_Reviewed` | Blank by design, for the same reason. |
+| Control_ID | The ISO/IEC 42001 clause or Annex A control, e.g. `A.6.2.3` or `7.5.1`. |
+| Req_ID | The requirement this mapping is about (matches `ca_requirements.csv`). |
+| Match_Strength | `Partial` — the control helps with part of the requirement; the Gap field says what is left. `None` — the control does not help at all. There are no Full matches in this preview. |
+| Gap | What the control leaves uncovered. This is the most important column: it is why a Partial is not a pass. |
+| Evidence_Examples | Records an auditor would look for. |
+| Rationale | Why the control maps to the requirement the way it does. |
+| Source_URL | The source the mapping's requirement text rests on. |
+| Source_Type | How that source was read. See below. |
+| Date_Accessed | The date the source was actually read, where one is established (YYYY-MM-DD). Blank where no real access date is established — a blank is not a missing value to be filled in from the snapshot date. |
+| Snapshot_Date | 2026-11-21 on every row — the date the data was snapshotted. See below. |
+| Confidence | `High` or `Medium`. See below. |
+| Reviewer | Blank by design. Filled only by the expert reviewer of a later pass. |
+| Last_Reviewed | Blank by design. Filled only by the expert reviewer of a later pass. |
 
-## Counts (v0.1-preview)
+## Source_Type
 
-- Requirements: 39 — SB 53: 7, AB 2013: 1, CCPA ADMT (ADMT + cybersecurity-audit rows): 10, SB 942: 6, FEHA: 10, SB 947: 3, SB 813: 1, AB 1405: 1.
-- Mappings: 123 — 88 Partial, 35 None, 0 Full.
-- Five FEHA requirements have no mapping row at all: CA-FEHA-11016,
-  CA-FEHA-11016-1, CA-FEHA-11016-2, CA-FEHA-11017-1, CA-FEHA-11072.
+| Value | What it means | Rows |
+|---|---|---|
+| Official text read | The text was read directly in an official source. | 37 |
+| Official URL cited; direct read not confirmed | The URL is the official location of the text, but no direct read of the official page is established. The text behind the row was checked another way (a mirror or a cross-check). Each such source group has an open item. | 70 |
+| Mirror | The text was read through a mirror of the official text (e.g. Justia, public.law). | 14 |
+| Secondary (law firm) | The text was read through a law-firm document (Orrick PDF). | 2 |
+
+## Confidence
+
+- **High** — the requirement's text was read directly in an official
+  source, the ISO control's scope was confirmed from a public description,
+  and no open item bears on that requirement. 33 rows: 28 resting on the
+  official CPPA approved text and 5 resting on the official CRD Final
+  Text. The 28 CPPA rows were held at Medium pending a spot-check; the
+  spot-check was confirmed 24 November 2026 and they upgraded to High.
+- **Medium** — everything else. Medium explicitly covers four cases: a
+  text read through a mirror, a text read through a secondary document,
+  an official source whose direct read is not confirmed, and an official
+  read where an open item bears on the requirement. The last case covers
+  four rows: the two mappings of CA-ADMT-7157 and the two of
+  CA-CCPA-CYBER-7124, where the submission portals (U-06) are part of the
+  requirement and could not be found. Medium does not mean the mapping is
+  wrong; it means the underlying text was not read directly in the
+  official source, or an open item still bears on it, so the mapping
+  should be checked against the official text before it is relied on.
+  90 rows.
+
+This definition is the same in the README, the methodology, and this file.
+
+## Snapshot_Date and Date_Accessed
+
+- **Snapshot_Date (2026-11-21)** is the date this data was frozen. It is
+  the same on every row of both files.
+- **Date_Accessed** is the date a source was actually read, where one is
+  established. It is filled on 53 mapping rows and blank
+  on 70. A blank Date_Accessed means the real access date is unknown — it
+  must not be filled in from the snapshot date.

@@ -1,87 +1,110 @@
-# Source verification — California preview
+# Source verification
 
-> **NOT YET ATTORNEY-REVIEWED.** This preview has not been reviewed by a
-> California-licensed attorney. It is an educational starting point, not legal
-> advice and not a substitute for advice tailored to your company.
+> **NOT YET ATTORNEY-REVIEWED.** This is a public preview, not legal advice.
+> **Last verified:** 21 November 2026. **Next check:** 18 February 2027.
 
-**Last verified: 21 November 2026.** This note records what was verified on
-that date, what is still UNVERIFIED, and what would close each open item. The
-11 open items are carried openly here — nothing in this preview rests on a
-source that was not read.
+## What this file is
 
-## What was verified (Fix Pass 2, 21 Nov 2026)
+A plain record of what was verified, what was not, and what would close
+each gap. The full per-source table — every official source, its link, and
+the date it was checked — is in [sources.md](sources.md). The screening
+conclusions are in [triage.md](triage.md). The method is in
+[methodology.md](methodology.md).
 
-Five items were closed by direct reads of authoritative sources. 0 items were
-contradicted.
+## Verified
 
-| Item | What was verified |
-|---|---|
-| AB2013-U3 | The preliminary-injunction denial order date in *X.AI v. Bonta* is **4 Mar 2026**, not 5 Mar. The filed order itself was read (Dkt. 35), corroborated by the CourtListener Dkt. 36 stipulation. Caveat: the order was read from a verbatim mirror copy, not a direct PACER pull. |
-| SB813-U4 | The Government Operations Agency report "AI Safety in 2026 and Beyond" was read as a PDF from govops.ca.gov. Its recommendation of mandatory ongoing licensed-IVO oversight is confirmed — broader than the press release — and it is still a proposal, not law. |
-| ADMT-U1 | CCPA §§7220(b)–(e), 7221 and 7222 were re-read in full from the official CPPA approved text. Confirmed: the 12-month re-ask rule, §7221(k), including its "except as allowed" qualifier; the aggregate-response rule, §7222(j), limited to §7222(b)(2) logic information; and access timing, §7021: 10 business days, 45 + 45, 90-day maximum. |
-| FEHA-U1 | The OAL register entry was checked. Correction: the entry is in **Register 2025, No. 28-Z (11 Jul 2025), pp. 886–887 — not No. 27-Z** as an earlier draft directed. File #2025–0515–01, filed 27 Jun 2025, effective 1 Oct 2025. |
-| FEHA-U2 | The Fix Pass 1 closure was re-confirmed: the "ADS alone is not an individualized assessment" rule is §11072(b)(5), item (F), in the CRD Final Text. |
+Five items were verified against the source itself on 21 November 2026:
 
-**FEHA adopted text (also 21 Nov 2026):** no later modification was found. The
-adopted text is the 17 March 2025 text as filed (CRD "Attachment B: Final
-Unmodified Text of Proposed Regulations"). All 8 cited sections (§§11008,
-11008.1, 11009, 11013, 11016, 11017, 11017.1, 11072) were read directly in the
-official Final Text and confirmed. One fix resulted: §11038 was omitted from
-an earlier conforming-amendments list — Final Text §11038(b) repeats the
-§11009(f) formula, and §11038 is in the register amend list (11 → 12
-sections). One flag for the attorney: §11008.1 has two overlapping
-"automated decision tool" definitions, (e) and (f), which differ.
+1. **AB 2013, preliminary-injunction date — 4 March 2026.** The filed
+   order (X.AI LLC v. Bonta, C.D. Cal. No. 2:25-cv-12295-JGB-SSC, Dkt. 35)
+   was read in full. Caveat: it was read via a mirror copy, not a
+   direct PACER pull; the date is corroborated by the CourtListener-hosted
+   Dkt. 36 stipulation.
+2. **CCPA ADMT, §§7220/7221/7222 sub-paragraphs.** Read in full from the
+   official CPPA approved text: the 12-month re-ask rule (§7221(k)), the
+   aggregate-response rule (§7222(j), limited to the §7222(b)(2) logic
+   information), and access timing (Article 5, §7021: 10 business days to
+   acknowledge, 45 calendar days to respond, one 45-day extension).
+3. **FEHA, OAL register.** The entry is in Register 2025, No. 28-Z
+   (11 July 2025), pp. 886–887 — File #2025–0515–01, filed 27 June 2025,
+   effective 1 October 2025.
+4. **FEHA, §11072.** The individualized-assessment sentence sits in
+   §11072(b)(5), item (F), read in the official CRD Final Text.
+5. **SB 813 / AB 1405, GovOps report.** The November 2026 Government
+   Operations Agency report ("AI Safety in 2026 and Beyond") recommending
+   mandatory verification oversight was read in full from the official
+   GovOps PDF. It is a proposal, not law.
 
-## Still UNVERIFIED (U-01–U-11)
+## Still open — 16 items
 
-The remaining 11 items use a single global sequence (U-01–U-11). None of them
-has been upgraded to verified.
+The full table, with the exact check that would close each item, is in
+[triage.md](triage.md#open-items). In short:
 
-| Item | What is unverified | What to check |
-|---|---|---|
-| U-01 | SB 53 — Lab. Code §1107.2 content and whether it imposes a developer duty. Official text unread; substantively answered via Justia (a single interpretive sentence — loss of equity value does not count as damage to or loss of property; no developer duty). | Read SEC. 4 of the SB 53 chaptered text, or leginfo codified LAB §1107.2, in a live browser. |
-| U-02 | SB 53 — Lab. Code §§1107–1107.1 against the official text (mirror only; no discrepancy found). | Read SEC. 4 of the leginfo chaptered text. |
-| U-03 | SB 53 — CalOES TFAIA Portal submission flow: whether both submission paths (critical safety incident report; periodic internal-use catastrophic-risk assessment summary) accept filings. Portal URL identified — see the correction below. | Open the portal URL in a live browser and confirm both submission paths accept filings. |
-| U-04 | AB 2013 — leginfo codified §§3110–3111 (verified via Justia only; leginfo returned HTTP 403 on 21 Nov 2026). | Open the leginfo code-section pages in a live browser. |
-| U-05 | AB 2013 — Ninth Circuit decision, No. 26-1591 (argued 18 Nov 2026; no decision as of 21 Nov 2026). | Check the Ninth Circuit opinions page before attorney review. Dated re-check. |
-| U-06 | ADMT — §7157 / §7124 submission portals live. See the correction below: the CPPA site blocks this browser outright, so the portal question is unanswered, not answered in the negative. | Check the CPPA website for the submission and certification portals before the 1 Apr 2028 deadlines. |
-| U-07 | SB 942 — codified §§22757.1–22757.6 direct read (leginfo returned HTTP 403). | Open the leginfo code-section pages in a live browser. |
-| U-08 | SB 942 — whether the Attorney General §22757.3(c) report-receipt mechanism exists (none found on oag.ca.gov, 21 Nov 2026). | Search oag.ca.gov and leginfo for the mechanism. |
-| U-09 | SB 947 — codified §§1520–1526.7 display (leginfo returned HTTP 403; no codified mirror exists yet). | Open the leginfo code-section pages in a live browser. |
-| U-10 | SB 947 — Labor Commissioner guidance on SB 947 (none found; re-checked 21 Nov 2026). | Check dir.ca.gov / Labor Commissioner publications before publication and before 1 Jul 2027. Dated re-check. |
-| U-11 | SB 813 / AB 1405 — codified Gov. Code §§8898–8898.4 and §§11549.80–11549.86 (leginfo returned HTTP 403). | Open the leginfo code-section pages in a live browser. Best re-checked on or after 1 Jan 2027, when the chapters take effect. |
+- **U-01–U-02** — Lab. Code §§1107–1107.2 (SB 53 whistleblower chapter):
+  official text not read; content checked via mirrors with no discrepancy
+  found.
+- **U-03** — CalOES TFAIA Portal: the portal's existence and its link from
+  the official CalOES page are confirmed; the portal itself was not opened.
+- **U-04** — Codified Civ. Code §§3110–3111 (AB 2013): verified via the
+  Justia mirror only.
+- **U-05** — Ninth Circuit decision, No. 26-1591: we could not find a
+  decision as of 21 November 2026; dated re-check.
+- **U-06** — §7157 / §7124 submission portals: we could not find one live
+  on cppa.ca.gov, 21 November 2026.
+- **U-07** — Codified BPC §§22757.1–22757.6 (SB 942): direct read not done.
+- **U-08** — AG §22757.3(c) report-receipt mechanism: we could not find
+  evidence it exists as of 21 November 2026.
+- **U-09** — Codified Lab. Code §§1520–1526.7 (SB 947): direct read not
+  done; we could not find a codified mirror as of 21 November 2026.
+- **U-10** — Labor Commissioner guidance on SB 947: we could not find
+  any as of 21 November 2026; dated re-check.
+- **U-11** — Codified Gov. Code §§8898–8898.4 and §§11549.80–11549.86
+  (SB 813 / AB 1405): direct read not done.
+- **U-12** — SB 53 chaptered text (BPC §§22757.10–22757.16): direct read
+  of the official leginfo bill text not confirmed.
+- **U-13** — SB 947 chaptered text (Ch. 859): direct read of the official
+  leginfo bill text not confirmed; full text read via a chaptered-text
+  mirror, 21 November 2026.
+- **U-14** — SB 942 amendments chaptered texts (SB 1000, AB 853,
+  AB 2713): direct reads of the official leginfo bill texts not confirmed;
+  AB 853 text read via a mirror.
+- **U-15** — SB 813 chaptered text (§§8898–8898.4): direct read not
+  confirmed; bill status page opened; chaptered text not read from the
+  official source. Text also read via the Orrick mirror.
+- **U-16** — AB 1405 official text (§§11549.80–11549.86): read only via
+  the Orrick law-firm PDF, 21 November 2026.
 
-## Two corrections recorded 21 Nov 2026
+## What the mirrors are
 
-**CalOES portal URL (U-03) — corrected.** The Fix Pass 2 record carried the
-portal URL `https://app.kaseware.us/public/#CALOES/e8921920-9735-4798-b24d-9c28c306f6e8`,
-taken from a search-result citation. A live-browser read of the CalOES page
-on 21 Nov 2026 showed its own links ("Submit Report" and "TFAIA Portal")
-point to a different URL:
+Some items in this preview rest on a mirror or a secondary document rather
+than a direct read of the official text. They are labelled as such in the
+data (`Source_Type` in
+[data/ca_mappings.csv](../data/ca_mappings.csv)) and kept at Medium
+confidence:
 
-`https://app.kaseware.us/public/#CalCSIC/ddf45408-7563-458a-a10a-8bf1e4c02088`
+- **AB 2013 codified §§3110–3111** — Justia mirror (U-04).
+- **SB 53 Lab. Code §§1107–1107.1** — public.law mirror, cross-checked
+  against Justia and the Attorney General's SB 53 page (U-02).
+- **SB 947 chaptered text** — chaptered-text mirror (U-13).
+- **SB 942 AB 853 chaptered text** — mirror (U-14).
+- **SB 813 chaptered text** — Orrick mirror (U-15).
+- **AB 1405 chaptered text** — Orrick law-firm PDF (U-16).
+- **AB 2013 preliminary-injunction order** — mirror copy of the
+  filed order, corroborated by a CourtListener stipulation.
 
-The corrected URL is used in this note. Both URLs were tried in the live
-browser and both are blocked identically (a blank page reading only "Your
-request was blocked"), so the portal itself remains unverified either way.
-The CSV in this preview still carries the earlier URL in the CA-SB53-22757-12D
-Notes — the data is published as verified in Fix Pass 2, and this note is the
-correction of record.
+## Official pages that could not be read directly
 
-**CPPA portals (U-06) — framing corrected.** An earlier draft described the
-§7157 / §7124 portals as "none found live." That framing is withdrawn: the
-CPPA site returns an F5 firewall rejection (Error 403) on every attempt,
-including from a fresh browser, so no CPPA page content was ever visible. The
-portal question is unanswered, not answered in the negative.
+The leginfo codified pages could not be read automatically; open them in a
+browser. That is the remaining step for U-01, U-02, U-04, U-07, U-09, and
+U-11. The exact pages are listed in [sources.md](sources.md). The CPPA
+website is JavaScript-driven, so a text read shows limited content — a
+browser check of its full navigation is the remaining step for U-06.
 
-## Why the leginfo reads are still open
+## Dated re-checks
 
-Every leginfo codified page opened on 21 Nov 2026 showed a Cloudflare
-Turnstile check ("Verify you are human"). Each attempt entered "Verifying you
-are human" and then reset to a fresh unchecked checkbox. The pattern repeated
-across the Labor Code §1107.2 page, the SB 53 bill-text page, and the leginfo
-home page, over about 31 minutes and one move to a fresh browser. No leginfo
-section text was ever seen, so nothing was guessed or paraphrased as verified.
-U-01, U-02, U-04, U-07, U-09 and U-11 all remain open for that reason. The
-remaining step is a live-browser read of the exact leginfo pages, or a fresh
-session later.
+Two items are dated re-checks, not failures: U-05 (Ninth Circuit decision)
+and U-10 (Labor Commissioner guidance). Both were checked on 21 November
+2026; we could not find a decision or guidance issued. Re-check them
+before attorney review, and U-10 again before the 1 July 2027 SB 947
+operative date. U-11 is best re-checked on or after 1 January 2027, when
+the SB 813 / AB 1405 chapters take effect.
