@@ -19,8 +19,8 @@ U-01–U-16 in [triage.md](triage.md#open-items).
 | SB 1000 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1000 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed) |
 | AB 853 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB853 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed); text previously read via a mirror 21 Nov 2026 |
 | AB 2713 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2713 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed) |
-| SB 813 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB813 | 21 Nov 2026 | Bill status page opened; chaptered text not read from the official source (U-15) |
-| AB 1405 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1405 | 21 Nov 2026 | Bill status page opened; chaptered text not read from the official source (U-16) |
+| SB 813 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB813 | 24 Nov 2026 | Chaptered text opened 24 Nov 2026; §§8898–8898.2 read and match, §§8898.3–8898.4 truncated in the shared snippet and not read (U-15) |
+| AB 1405 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1405 | 24 Nov 2026 | Chaptered text opened 24 Nov 2026; §§11549.80–11549.83 read and match, §§11549.84–11549.86 not read (U-16) |
 
 ## Codified sections (leginfo — to check in a browser)
 
@@ -30,10 +30,10 @@ These pages could not be read automatically; open them in a browser.
 |---|---|---|
 | Lab. Code §1107.2 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1107.2.&lawCode=LAB | U-01 (closed 24 Nov 2026; §1107.2 confirmed via the SEC. 4 chaptered-text read; codified page not opened) |
 | Civ. Code §§3110–3111 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=3111 | U-04 (closed 24 Nov 2026; §3111 read, §3110 not opened) |
-| BPC §§22757.1–22757.6 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=22757.3 | U-07 (§22757.3 read 24 Nov 2026; §§22757.1, 22757.2, 22757.4, 22757.5, 22757.6 not yet opened) |
-| Lab. Code §§1520–1526.7 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=1520 | U-09 |
-| Gov. Code §§8898–8898.4 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=8898 | U-11 |
-| Gov. Code §§11549.80–11549.86 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11549.82 | U-11 |
+| BPC §§22757.1–22757.6 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=22757.3 | U-07 closed 24 Nov 2026 (§§22757.1–22757.6 read; §22757.6 confirms operative date 2 Aug 2026) |
+| Lab. Code §§1520–1526.7 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=1520 | U-09 (§1520, §1522, §1524, §1526, §1526.7 pages opened 24 Nov 2026; body text blank, not directly read) |
+| Gov. Code §§8898–8898.4 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=8898 | U-11 — §8898 page opened 24 Nov 2026, body text truncated; re-check on/after 1 Jan 2027 |
+| Gov. Code §§11549.80–11549.86 | https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=11549.82 | U-11 — §11549.82 page opened 24 Nov 2026, body text truncated; re-check on/after 1 Jan 2027 |
 
 ## Official agency sources — read directly
 
@@ -42,13 +42,15 @@ These pages could not be read automatically; open them in a browser.
 | CPPA approved text (CCPA ADMT / risk-assessment / cybersecurity-audit regulations, 127 pp) | https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf | 21 Nov 2026 | Full approved text read, including §§7001, 7120–7124, 7150–7157, 7200, 7220–7222; §7021 read for Article 5 timing; §§7220, 7221, 7222 re-read in full 21 Nov 2026 |
 | CPPA Notice of Approval (Matter No. 2025-0808-04) | https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_noa.pdf | 21 Nov 2026 | Approval and effective date (1 Jan 2026) |
 | CPPA rulemaking page | https://cppa.ca.gov/regulations/ccpa_updates | 21 Nov 2026 | We could not find a §7157 / §7124 submission portal (U-06) |
-| CPPA homepage | https://cppa.ca.gov/ | 21 Nov 2026 | We could not find a business submission portal (U-06) |
+| CPPA homepage | https://cppa.ca.gov/ | 24 Nov 2026 | Searched 24 Nov 2026: no §7157 / §7124 submission portal found; site notes submissions are made via its website once available (U-06) |
+| CPPA Audits Update (Aug. 7, 2026) | https://cppa.ca.gov/meetings/materials/20260806_07_11.pdf | 24 Nov 2026 | Portal development ongoing; initial §7157 risk assessment submissions and phased §7124 audit certifications begin 1 Apr 2028 (11 CCR §§7121, 7124, 7157) (U-06) |
 | CRD Final Text (FEHA ADS regulations, Attachment B, v. 3/17/2025) | https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2025/03/Attachment-B-Final-Unmodified-Text-of-Proposed-Employment-Regulations-Regarding-Automated-Decision-Systems.pdf | 21 Nov 2026 | All 8 cited sections read directly: §§11008, 11008.1, 11009, 11013, 11016, 11017, 11017.1, 11072, incl. §11072(b)(5), item (F) |
 | CRD press release (30 Jun 2025) | https://calcivilrights.ca.gov/wp-content/uploads/sites/32/2025/06/2025.06.30-Automated-Decisions-Regs-Release.pdf | 21 Nov 2026 | Approval 27 Jun 2025; in force 1 Oct 2025 |
 | CRD Civil Rights Council Rulemaking Actions | https://calcivilrights.ca.gov/civilrightscouncil/rulemaking-actions/ | 21 Nov 2026 | We could not find later rulemaking touching the ADS sections |
 | OAL Register 2025, No. 28-Z | https://oal.ca.gov/wp-content/uploads/sites/166/2025/07/2025-Notice-Register-No.-28-Z-July-11-2025.pdf | 21 Nov 2026 | FEHA entry, pp. 886–887 (File #2025–0515–01) |
 | OAL Register 2025, No. 27-Z | https://oal.ca.gov/wp-content/uploads/sites/166/2025/07/2025-Notice-Register-No.-27-Z-July-4-2025.pdf | 21 Nov 2026 | Checked; we could not find a FEHA entry (filings through 25 Jun 2025 only) |
-| CalOES TFAIA reporting page | https://www.caloes.ca.gov/office-of-the-director/operations/homeland-security/california-cybersecurity-integration-center/transparency-in-frontier-ai-act-reporting/ | 21 Nov 2026 | Links the secure reporting portal; portal itself not opened (U-03) |
+| CalOES TFAIA reporting page | https://www.caloes.ca.gov/office-of-the-director/operations/homeland-security/california-cybersecurity-integration-center/transparency-in-frontier-ai-act-reporting/ | 24 Nov 2026 | Links the secure reporting portal (TFAIA Portal, Submit Report link, TFAIA Incident Reporting Portal Worksheet); portal opened 24 Nov 2026 and live — submission form confirmed; dropdown option labels confirmed 24 Nov 2026 (U-03 closed) |
+| TFAIA Portal (Kaseware) | https://app.kaseware.us/public/#CalCSIC/ddf45408-7563-458a-a10a-8bf1e4c02088 | 24 Nov 2026 | Submission form live (type dropdown, developer/public toggle, attachments up to 10 MB, Sensitivity Designation per BPC §22757.13(f), reCAPTCHA Submit); dropdown expanded 24 Nov 2026 — three options listed, both submission paths confirmed by name (U-03 closed) |
 | Attorney General SB 53 page | https://oag.ca.gov/sb53 | 21 Nov 2026 | Substance of the Lab. Code chapter confirmed |
 | Executive Order N-9-26 (official PDF) | https://www.gov.ca.gov/wp-content/uploads/2026/09/FINAL-N-9-26-AI-EO-9.18.26-SIGNED.pdf | 21 Nov 2026 | Read in full |
 | GovOps report "AI Safety in 2026 and Beyond" (official PDF) | https://www.govops.ca.gov/wp-content/uploads/sites/11/2026/11/FINAL_-AI-Safety-in-2026-and-Beyond-v2.pdf | 21 Nov 2026 | Read in full; mandatory IVO oversight is a proposal, not law |
@@ -75,7 +77,7 @@ These pages could not be read automatically; open them in a browser.
 
 | What was searched | Date checked | Result |
 |---|---|---|
-| CPPA submission portal (§7157) and certification portal (§7124) | 21 Nov 2026 | We could not find a portal, form, or submission-instruction page. (U-06) |
+| CPPA submission portal (§7157) and certification portal (§7124) | 24 Nov 2026 | Searched cppa.ca.gov 24 Nov 2026: no live portal URLs found; CPPA's Aug 2026 Audits Update says the portal is still being built, with first submissions/certifications from 1 Apr 2028. (U-06) |
 | AG §22757.3(c) report-receipt mechanism (oag.ca.gov) | 21 Nov 2026 | We could not find a mechanism, form, portal, email, or AG page. (U-08) |
 | Labor Commissioner guidance on SB 947 (dir.ca.gov) | 21 Nov 2026 | We could not find guidance, FAQ, or rulemaking as of 21 Nov 2026. (U-10) |
 

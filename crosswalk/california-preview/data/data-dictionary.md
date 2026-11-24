@@ -7,8 +7,8 @@
 
 - `ca_requirements.csv` — 40 requirements from seven California laws.
 - `ca_mappings.csv` — 123 mappings of those requirements to ISO/IEC 42001
-  controls: 88 Partial, 35 None, 0 Full. Confidence: 72 High, 51 Medium.
-- 10 open items (U-03, U-05–U-11, U-15–U-16) are listed in
+  controls: 88 Partial, 35 None, 0 Full. Confidence: 89 High, 34 Medium.
+- 8 open items (U-05, U-06, U-08–U-11, U-15–U-16) are listed in
   [triage.md](../docs/triage.md#open-items) and
   [source-verification.md](../docs/source-verification.md).
 
@@ -61,24 +61,23 @@ the open-items list, not on the row.
 
 - **High** — the requirement's text was read directly in an official
   source, the ISO control's scope was confirmed from a public description,
-  and no open item bears on that requirement. 72 rows: 28 resting on the
+  and no open item bears on that requirement. 89 rows: 28 resting on the
   official CPPA approved text, 5 resting on the official CRD Final
-  Text, and 39 resting on the SB 53 chaptered text read directly on
-  leginfo 24 November 2026. The 28 CPPA rows were held at Medium pending a spot-check; the
+  Text, 46 resting on the SB 53 chaptered text read directly on
+  leginfo 24 November 2026, and 10 resting on the SB 942 codified sections
+  and chaptered texts read directly on leginfo 24 November 2026. The 28 CPPA rows were held at Medium pending a spot-check; the
   spot-check was confirmed 24 November 2026 and they upgraded to High.
 - **Medium** — everything else. Medium explicitly covers four cases: a
   text read through a mirror, a text read through a secondary document,
   an official source whose direct read is not confirmed, and an official
   read where an open item bears on the requirement. The last case covers
-  eleven rows: the two mappings of CA-ADMT-7157 and the two of
+  four rows: the two mappings of CA-ADMT-7157 and the two of
   CA-CCPA-CYBER-7124, where the submission portals (U-06) are part of the
-  requirement and could not be found, and the seven mappings of
-  CA-SB53-22757-12D and CA-SB53-22757-13, where the CalOES submission
-  portal (U-03) has not been opened. Medium does not mean the mapping is
+  requirement and could not be found. Medium does not mean the mapping is
   wrong; it means the underlying text was not read directly in the
   official source, or an open item still bears on it, so the mapping
   should be checked against the official text before it is relied on.
-  51 rows.
+  34 rows.
 
 This definition is the same in the README, the methodology, and this file.
 

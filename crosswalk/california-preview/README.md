@@ -33,20 +33,20 @@ yourself, key dates, and which ISO controls help.
   controls in **123 mappings**: 88 Partial, 35 None, 0 Full. No control fully
   satisfies a California requirement on its own — the laws and the standard
   do different jobs.
-- **72 High / 51 Medium confidence.** High means the requirement's text
+- **89 High / 34 Medium confidence.** High means the requirement's text
   was read directly in an official source, the ISO control's scope was
   confirmed from a public description, and no open item bears on that
   requirement. Medium covers everything else: reads through a mirror or a
   secondary document, official sources whose direct read is not confirmed,
-  and official reads where an open item bears on the requirement (eleven
+  and official reads where an open item bears on the requirement (four
   rows). The 28 rows resting on the official CPPA approved text were held
   at Medium pending a spot-check; the spot-check was confirmed 24 November
   2026 and they are now High. See [methodology](docs/methodology.md).
-- **10 open items.** Ten things are still unverified — mostly direct
+- **8 open items.** Eight things are still unverified — mostly direct
   reads of official texts that could not be opened, and two submission
   portals we could not find live. They are listed openly in
   [triage](docs/triage.md#open-items) and
-  [source verification](docs/source-verification.md). Six items (U-01, U-02, U-04, U-12,
+  [source verification](docs/source-verification.md). Eight items (U-01, U-02, U-03, U-04, U-07, U-12,
   U-13, U-14) are closed: see [triage](docs/triage.md#closed). Nothing is hidden
   behind a confidence score.
 
