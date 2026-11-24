@@ -23,15 +23,12 @@ Law for the register entry, the Governor's office and the Government
 Operations Agency for executive orders and reports, and the Attorney
 General's office for SB 53.
 
-Some rows rest on a mirror or a secondary document as the sole source for
-the text they encode, because the official page could not be read directly:
+One claim still rests on a secondary document as its sole source,
+because the official page could not be read directly:
 
-- **SB 53 Lab. Code §§1107–1107.1** — public.law mirror (U-02).
-- **AB 1405 chaptered text** — Orrick law-firm PDF (U-16).
+- **AB 1405 §11549.83.5 advertising claim** — Orrick law-firm PDF (not yet read from the official source).
 
-Those rows are labelled in the data (`Source_Type` in
-[data/ca_mappings.csv](../data/ca_mappings.csv)) and kept at Medium
-confidence. They are not presented as if the official text had been read.
+The claim is flagged in the Notes on its row. It is not presented as if the official text had been read.
 Every other row's source route is recorded the same way: `Source_Type` is
 "Official text read", "Official URL cited; direct read not confirmed",
 "Mirror", or "Secondary (law firm)". See [sources.md](sources.md) for the

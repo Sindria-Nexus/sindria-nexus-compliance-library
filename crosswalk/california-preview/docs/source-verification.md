@@ -35,7 +35,7 @@ Five items were verified against the source itself on 21 November 2026:
    mandatory verification oversight was read in full from the official
    GovOps PDF. It is a proposal, not law.
 
-## Still open — 8 items
+## Still open — 6 items
 
 The full table, with the exact check that would close each item, is in
 [triage.md](triage.md#open-items). In short:
@@ -47,18 +47,14 @@ The full table, with the exact check that would close each item, is in
 - **U-08** — AG §22757.3(c) report-receipt mechanism: we could not find
   evidence it exists as of 21 November 2026.
 - **U-09** — Codified Lab. Code §§1520–1526.7 (SB 947): direct read not
-  done; we could not find a codified mirror as of 21 November 2026.
+  done; §1520, §1522, §1524, §1526 and §1526.7 pages opened 24 Nov 2026
+  but body text did not render.
 - **U-10** — Labor Commissioner guidance on SB 947: we could not find
   any as of 21 November 2026; dated re-check.
 - **U-11** — Codified Gov. Code §§8898–8898.4 and §§11549.80–11549.86
   (SB 813 / AB 1405): direct read not done.
-- **U-15** — SB 813 chaptered text (§§8898–8898.4): direct read not
-  confirmed; bill status page opened; chaptered text not read from the
-  official source. Text also read via the Orrick mirror.
-- **U-16** — AB 1405 official text (§§11549.80–11549.86): read only via
-  the Orrick law-firm PDF, 21 November 2026.
 
-Closed: U-01 — Lab. Code §1107.2 confirmed by the SEC. 4 chaptered-text read on leginfo 24 Nov 2026; single interpretive sentence, no standalone developer duty. U-02 — Lab. Code §§1107–1107.1 read via SEC. 4 on leginfo 24 Nov 2026; substance matches the mirror reading. U-03 — CalOES TFAIA portal opened 24 Nov 2026 and live; submission-type dropdown expanded the same day, both paths confirmed by name. U-04 — §3111 read directly on leginfo 24 Nov 2026; matches the mirror reading. U-07 — Codified BPC §§22757.1–22757.6 read on leginfo 24 Nov 2026; substance matches, §22757.6 confirms the chapter operative 2 Aug 2026; 10 rows upgraded to High. U-12 — SB 53 chaptered text read directly on leginfo 24 Nov 2026; substance matches; 39 rows upgraded to High. U-13 — SB 947 chaptered text read directly on leginfo 24 Nov 2026; substance matches; codified LAB §1520 pages not opened (U-09 still open). U-14 — SB 942 amendment chaptered texts read directly on leginfo 24 Nov 2026; substance matches, with the §22757.3/AB 853 citation corrected. See [triage.md](triage.md#closed).
+Closed: U-01 — Lab. Code §1107.2 confirmed by the SEC. 4 chaptered-text read on leginfo 24 Nov 2026; single interpretive sentence, no standalone developer duty. U-02 — Lab. Code §§1107–1107.1 read via SEC. 4 on leginfo 24 Nov 2026; substance matches the mirror reading. U-03 — CalOES TFAIA portal opened 24 Nov 2026 and live; submission-type dropdown expanded the same day, both paths confirmed by name. U-04 — §3111 read directly on leginfo 24 Nov 2026; matches the mirror reading. U-07 — Codified BPC §§22757.1–22757.6 read on leginfo 24 Nov 2026; substance matches, §22757.6 confirms the chapter operative 2 Aug 2026; 10 rows upgraded to High. U-12 — SB 53 chaptered text read directly on leginfo 24 Nov 2026; substance matches; 39 rows upgraded to High. U-13 — SB 947 chaptered text read directly on leginfo 24 Nov 2026; substance matches; codified LAB §1520 pages not opened (U-09 still open). U-14 — SB 942 amendment chaptered texts read directly on leginfo 24 Nov 2026; substance matches, with the §22757.3/AB 853 citation corrected. U-15 — SB 813 chaptered text §§8898.3–8898.4 read on leginfo 24 Nov 2026; substance matches (annual IVO report, non-mandate/non-endorsement, §8898.4(b) relevance rule); 2 rows now 'Official text read'. U-16 — AB 1405 chaptered text §§11549.84–11549.86 read on leginfo 24 Nov 2026; substance matches (investigations/removal, APA rulemaking, §11549.86(a)–(b)); 2 rows now 'Official text read'. See [triage.md](triage.md#closed).
 
 ## What the mirrors are
 
@@ -68,8 +64,7 @@ data (`Source_Type` in
 [data/ca_mappings.csv](../data/ca_mappings.csv)) and kept at Medium
 confidence:
 
-- **SB 813 chaptered text** — Orrick mirror (U-15).
-- **AB 1405 chaptered text** — Orrick law-firm PDF (U-16).
+- **AB 1405 §11549.83.5 advertising claim** — Orrick law-firm PDF (not yet read from the official source).
 - **AB 2013 preliminary-injunction order** — mirror copy of the
   filed order, corroborated by a CourtListener stipulation.
 

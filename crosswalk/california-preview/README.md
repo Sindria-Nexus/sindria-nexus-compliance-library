@@ -42,12 +42,12 @@ yourself, key dates, and which ISO controls help.
   rows). The 28 rows resting on the official CPPA approved text were held
   at Medium pending a spot-check; the spot-check was confirmed 24 November
   2026 and they are now High. See [methodology](docs/methodology.md).
-- **8 open items.** Eight things are still unverified — mostly direct
+- **6 open items.** Six things are still unverified — mostly direct
   reads of official texts that could not be opened, and two submission
   portals we could not find live. They are listed openly in
   [triage](docs/triage.md#open-items) and
-  [source verification](docs/source-verification.md). Eight items (U-01, U-02, U-03, U-04, U-07, U-12,
-  U-13, U-14) are closed: see [triage](docs/triage.md#closed). Nothing is hidden
+  [source verification](docs/source-verification.md). Ten items (U-01, U-02, U-03, U-04, U-07, U-12,
+  U-13, U-14, U-15, U-16) are closed: see [triage](docs/triage.md#closed). Nothing is hidden
   behind a confidence score.
 
 ## Federal preemption

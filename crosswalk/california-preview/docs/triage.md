@@ -309,7 +309,7 @@ qualification on any duty. Re-check at each quarterly review.
 
 ## Open items
 
-Eight things are still unverified. They are listed here so the preview
+Six things are still unverified. They are listed here so the preview
 can be corrected in public. "What to check" is the exact step that would
 close the item.
 
@@ -321,8 +321,6 @@ close the item.
 | U-09 | Codified Lab. Code §§1520–1526.7 display — we could not find a codified mirror as of 21 Nov 2026; on 24 Nov 2026 the §1520, §1522, §1524, §1526 and §1526.7 code pages were opened in a browser but the body text did not render (blank), so no direct codified read; substance matches via the SB 947 chaptered text (U-13 closed). Re-check on/after 1 Jul 2027, when the sections become operative. | Open the leginfo code-section pages in a browser |
 | U-10 | Labor Commissioner guidance on SB 947 — we could not find any; re-checked 21 Nov 2026 | Check dir.ca.gov / Labor Commissioner publications before publication and before 1 Jul 2027 |
 | U-11 | Codified Gov. Code §§8898–8898.4 and §§11549.80–11549.86 — GOV §8898 and GOV §11549.82 code pages opened 24 Nov 2026, but body text truncated in the shared context; chapters take effect 1 Jan 2027 and are not yet codified as active law | Re-check the leginfo code-section pages on or after 1 Jan 2027 and read the remaining sections |
-| U-15 | SB 813 chaptered text (§§8898–8898.4) — chaptered text opened on leginfo 24 Nov 2026; §§8898–8898.2 read and match the preview, §§8898.3–8898.4 truncated in the shared snippet and not read from the official source. Text also read via the Orrick mirror | Read §§8898.3–8898.4 from the leginfo chaptered text (or on/after 1 Jan 2027) and confirm the chaptered text in full |
-| U-16 | AB 1405 official text (§§11549.80–11549.86) — chaptered text opened on leginfo 24 Nov 2026; §§11549.80–11549.83 read and match the preview, §§11549.84–11549.86 not read from the official source. Text also read via the Orrick law-firm PDF, 21 Nov 2026 | Read §§11549.84–11549.86 from the leginfo chaptered text (or on/after 1 Jan 2027) and confirm the chaptered text in full |
 
 ## Closed
 
@@ -336,6 +334,8 @@ close the item.
 | U-12 | SB 53 chaptered text (BPC §§22757.10–22757.16) read directly on leginfo; substance matches the text checked (definitions and thresholds, frontier AI framework, transparency reports, internal-use summaries, false-statement ban and redactions, incident reporting, enforcement). 46 mapping rows now 'Official text read'; 39 upgraded to High. | 24 Nov 2026 |
 | U-13 | SB 947 chaptered text (Ch. 859) read directly on leginfo; substance matches the text checked (ADS definition and exclusions §1520(c), prohibited uses §1522(a), no-sole-reliance and human corroboration §1522(b)–(c), data-description right §1522(d)–(e), post-use notice §1524, anti-retaliation §1526, $500/violation penalty §1526.1(e), CBA waiver §1526.5, federal aviation/defense/space carve-out §1526.6). Codified LAB §1520, §1522, §1524, §1526 and §1526.7 pages opened 24 Nov 2026; body text blank, not directly read (U-09 still open). | 24 Nov 2026 |
 | U-14 | SB 942 amendment chaptered texts (SB 1000, AB 853, AB 2713) read directly on leginfo; substance matches the text checked. One correction: §22757.3 was not amended by AB 853 — citation and Notes fixed. §22757.3 codified page also opened 24 Nov 2026 (U-07 still open). | 24 Nov 2026 |
+| U-15 | SB 813 chaptered text (§§8898–8898.4) read directly on leginfo; substance matches the text checked (§8898.3 annual IVO report; §8898.4 non-mandate/non-endorsement and §8898.4(b) relevance rule). The two CA-SB813-8898 rows now 'Official text read'; confidence stays Medium under U-11. | 24 Nov 2026 |
+| U-16 | AB 1405 chaptered text (§§11549.80–11549.86) read directly on leginfo; substance matches the text checked (§11549.84 investigations/removal; §11549.85 APA rulemaking; §11549.86(a)–(b) preservation and non-endorsement). The two CA-AB1405-11549-82 rows now 'Official text read'; confidence stays Medium under U-11. The §11549.83.5 advertising claim still rests on the Orrick PDF. | 24 Nov 2026 |
 
 ---
 

@@ -19,8 +19,8 @@ U-01–U-16 in [triage.md](triage.md#open-items).
 | SB 1000 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB1000 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed) |
 | AB 853 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB853 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed); text previously read via a mirror 21 Nov 2026 |
 | AB 2713 chaptered text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2713 | 24 Nov 2026 | Direct read 24 Nov 2026 (U-14 closed) |
-| SB 813 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB813 | 24 Nov 2026 | Chaptered text opened 24 Nov 2026; §§8898–8898.2 read and match, §§8898.3–8898.4 truncated in the shared snippet and not read (U-15) |
-| AB 1405 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1405 | 24 Nov 2026 | Chaptered text opened 24 Nov 2026; §§11549.80–11549.83 read and match, §§11549.84–11549.86 not read (U-16) |
+| SB 813 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB813 | 24 Nov 2026 | Chaptered text opened 24 Nov 2026; §§8898–8898.4 read and match (U-15 closed 24 Nov 2026) |
+| AB 1405 bill status page | https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1405 | 24 Nov 2026 | Chaptered text opened 24 Nov 2026; §§11549.80–11549.86 read and match (U-16 closed 24 Nov 2026) |
 
 ## Codified sections (leginfo — to check in a browser)
 

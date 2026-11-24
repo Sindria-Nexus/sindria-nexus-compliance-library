@@ -8,7 +8,7 @@
 - `ca_requirements.csv` — 40 requirements from seven California laws.
 - `ca_mappings.csv` — 123 mappings of those requirements to ISO/IEC 42001
   controls: 88 Partial, 35 None, 0 Full. Confidence: 89 High, 34 Medium.
-- 8 open items (U-05, U-06, U-08–U-11, U-15–U-16) are listed in
+- 6 open items (U-05, U-06, U-08–U-11) are listed in
   [triage.md](../docs/triage.md#open-items) and
   [source-verification.md](../docs/source-verification.md).
 
@@ -52,10 +52,10 @@ the open-items list, not on the row.
 
 | Value | What it means | Rows |
 |---|---|---|
-| Official text read | The text was read directly in an official source. | 119 |
-| Official URL cited; direct read not confirmed | The URL is the official location of the text, but no direct read of the official page is established. The text behind the row was checked another way (a mirror or a cross-check). Each such source group has an open item. | 2 |
+| Official text read | The text was read directly in an official source. | 123 |
+| Official URL cited; direct read not confirmed | The URL is the official location of the text, but no direct read of the official page is established. The text behind the row was checked another way (a mirror or a cross-check). Each such source group has an open item. | 0 |
 | Mirror | The text was read through a mirror of the official text (e.g. Justia, public.law). | 0 |
-| Secondary (law firm) | The text was read through a law-firm document (Orrick PDF). | 2 |
+| Secondary (law firm) | The text was read through a law-firm document (Orrick PDF). | 0 |
 
 ## Confidence
 
@@ -86,6 +86,6 @@ This definition is the same in the README, the methodology, and this file.
 - **Snapshot_Date (2026-11-21)** is the date this data was frozen. It is
   the same on every row of both files.
 - **Date_Accessed** is the date a source was actually read, where one is
-  established. It is filled on 53 mapping rows and blank
-  on 70. A blank Date_Accessed means the real access date is unknown — it
+  established. It is filled on 123 mapping rows and blank
+  on 0. A blank Date_Accessed means the real access date is unknown — it
   must not be filled in from the snapshot date.
